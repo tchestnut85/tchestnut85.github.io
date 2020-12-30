@@ -3,31 +3,25 @@ import React from 'react';
 function Nav(props) {
 
     const {
-        sections = [],
+        sections,
         currentSection,
         setCurrentSection
     } = props;
 
-    console.log(sections);
-
     return (
-        <header className='flex space-a'>
+        <nav className='navbar'>
             <h1>
-                <a href='/' className='my-name'>Tom Chestnut</a>
+                <a href='/' className='my-name'><span>Tom</span><span>Chestnut</span></a>
             </h1>
-            <nav>
-                <ul className='flex space-b'>
-                    {sections.map((section) => (
-                        <li key={section.name} className='list'>
-                            <a href=''>
-                                <span onClick={() => setCurrentSection(section)}>{section.name}</span>
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
-        </header >
+            <ul className='flex space-a'>
+                {sections.map((section) => (
+                    <li key={section.id} className='list'>
+                        <span onClick={() => setCurrentSection(section)}>{section.name}</span>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     );
-}
+};
 
 export default Nav;
