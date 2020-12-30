@@ -1,5 +1,5 @@
 :root {
-  --primaryColor: rgb(126, 180, 235);
+  --primaryColor: rgb(6, 95, 107);
   --secondColor: teal;
   --thirdColor: rgb(143, 69, 143); 
   --fontColor: whitesmoke;
@@ -17,6 +17,29 @@ main {
   margin: 5% auto;
 }
 
+a, a:visited {
+  text-decoration: none;
+  color: var(--fontColor);
+}
+
+/* NAV SECTION */
+
+header {
+  margin: 5% auto;
+}
+
+nav li {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  margin-left: 5%;
+  color: var(--fontColor);
+}
+
+/* ABOUT SECTION  */
+
 .about {
   margin: 0 auto;
   padding: 3% 5% 0 5%;
@@ -29,3 +52,25 @@ main {
   padding: 5% 5%;
   color: whitesmoke
 }
+
+/* UTILITY CLASSES */
+
+.flex {
+  display: flex;
+}
+
+.centered {
+  justify-content: center;
+  align-items: center;
+}
+
+.space-a {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.space-b {
+  justify-content: space-between;
+  align-items: center;
+}
+
