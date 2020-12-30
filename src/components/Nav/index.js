@@ -19,7 +19,9 @@ function Nav(props) {
                 <ul className='flex space-b'>
                     {sections.map((section) => (
                         <li key={section.name} className='list'>
-                            <span onClick={() => setCurrentSection(section)}>{section.name}</span>
+                            <a href=''>
+                                <span onClick={() => setCurrentSection(section)}>{section.name}</span>
+                            </a>
                         </li>
                     ))}
                 </ul>
