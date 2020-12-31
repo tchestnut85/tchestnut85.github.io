@@ -3,6 +3,7 @@ import './index.css';
 import Header from './components/Header';
 import About from './components/About';
 import Footer from './components/Footer';
+import Portfolio from './components/Portfolio';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <Header></Header>
       <main>
         <About></About>
+        <Portfolio></Portfolio>
       </main>
       <Footer></Footer>
     </div>

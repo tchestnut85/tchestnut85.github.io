@@ -14,7 +14,7 @@
 
 main {
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 50px 0 150px 0;
   background-color: var(--primaryColor);
 }
 
@@ -85,6 +85,82 @@ nav li {
   line-height: 2rem;
 }
 
+/* PROJECTS SECTION */
+
+.project-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px 15px;
+}
+
+.project-grid-1 {
+  border-radius: 5%;
+  background-color: var(--thirdColor);
+  box-shadow: 5px 10px 5px var(--secondColor);
+  padding: 15px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.project-grid-2 {
+  border-radius: 5%;
+  background-color: var(--thirdColor);
+  box-shadow: 5px 10px 5px var(--secondColor);
+  padding: 15px;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.project-grid-3 {
+  border-radius: 5%;
+  background-color: var(--thirdColor);
+  box-shadow: 5px 10px 5px var(--secondColor);
+  padding: 15px;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.project-grid-4 {
+  border-radius: 5%;
+  background-color: var(--thirdColor);
+  box-shadow: 5px 10px 5px var(--secondColor);
+  padding: 15px;
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.project-grid-5 {
+  border-radius: 5%;
+  background-color: var(--thirdColor);
+  box-shadow: 5px 10px 5px var(--secondColor);
+  padding: 15px;
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.project-grid-6 {
+  border-radius: 5%;
+  background-color: var(--thirdColor);
+  box-shadow: 5px 10px 5px var(--secondColor);
+  padding: 15px;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.project-img {
+  width: 200px;
+  height: 150px;
+}
+
+
 /* FOOTER */
 
 .footer {
@@ -92,7 +168,7 @@ nav li {
   width: 100%;
   padding: 30px 75px;
   /* margin-bottom: 0; */
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
 } 
 
