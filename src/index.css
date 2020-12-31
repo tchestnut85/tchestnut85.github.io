@@ -1,6 +1,6 @@
 :root {
-  --primaryColor: rgb(6, 95, 107);
-  --secondColor: teal;
+  --primaryColor: teal;
+  --secondColor: rgb(6, 95, 107);
   --thirdColor: rgb(143, 69, 143); 
   --fontColor: whitesmoke;
 }
@@ -10,11 +10,12 @@
     margin: 0px;
     padding: 0px;
     font-family:  'Raleway', sans-serif;
-    background-color: var(--primaryColor);
 }
 
 main {
-  margin: 5% auto;
+  margin: 0 auto;
+  padding: 50px 0;
+  background-color: var(--primaryColor);
 }
 
 a, a:visited {
@@ -25,7 +26,7 @@ a, a:visited {
 /* NAV SECTION */
 
 header {
-  margin: 5% auto;
+  margin: auto;
 }
 
 nav li {
@@ -44,14 +45,28 @@ nav li {
 }
 
 .navbar {
+  padding: 5% 0;
   display: flex;
   justify-content: space-around;
+  background-color: var(--secondColor)
 }
 
 .list {
   list-style: none;
-  margin-left: 10%;
   color: var(--fontColor);
+}
+
+.list span {
+  padding: 15px 15px;
+  font-size: 20px;
+  border-radius: 10%;
+  transition: font-size .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out;
+}
+
+.list span:hover {
+  font-size: 30px;
+  color: paleturquoise;
+  background-color: var(--thirdColor);
 }
 
 /* ABOUT SECTION  */
@@ -59,26 +74,67 @@ nav li {
 .about {
   margin: 0 auto;
   padding: 3% 5% 0 5%;
-  background-color: var(--secondColor);
+  background-color: var(--primaryColor);
 }
 
 .bio {
-  background-color: var(--secondColor);
+  background-color: var(--primaryColor);
   margin: 0 auto;
   padding: 5% 5%;
   color: whitesmoke;
   line-height: 2rem;
 }
 
+/* FOOTER */
+
+.footer {
+  background-color: var(--thirdColor); 
+  width: 100%;
+  padding: 30px 75px;
+  /* margin-bottom: 0; */
+  position: fixed;
+  bottom: 0;
+} 
+
+.footer span {
+  padding: 10px 15px;
+  border-radius: 10%;;
+  transition: background-color .5s ease-in-out;
+}
+
+.icon-link {
+  font-size: 65px;
+  transition: font-size .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out;
+}
+
+.footer span:hover {
+  background-color: var(--secondColor);
+}
+
+.icon-link:hover {
+  font-size: 80px;
+  color: paleturquoise;
+}
+
+.link-name {
+  font-size: 20px;
+}
+
+.icons {
+  padding-bottom: 15px;
+}
+
 /* UTILITY CLASSES */
 
 .flex {
   display: flex;
+  text-align: center;
 }
 
 .centered {
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .space-a {
@@ -91,3 +147,6 @@ nav li {
   align-items: center;
 }
 
+.wrap {
+  flex-wrap: wrap;
+}
