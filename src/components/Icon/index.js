@@ -5,7 +5,6 @@ import { faLinkedin, faGithubSquare, faHackerrank, faStackOverflow } from '@fort
 function Icon(props) {
 
     const { links } = props;
-    console.log(links);
 
     function iconName(id) {
         switch (id) {

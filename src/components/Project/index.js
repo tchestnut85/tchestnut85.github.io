@@ -36,7 +36,7 @@ function Project() {
         {
             id: '4',
             title: 'Social Network Backend',
-            url: 'https://youtu.be/NXepIg0EKCs',
+            url: 'http://bit.ly/social-tc',
             repo: 'social-network',
             image: photo4,
             features: 'Back-End, MongoDB, RESTful API'
@@ -62,15 +62,15 @@ function Project() {
     return (
         <div className='project-grid'>
             {projects.map((project) => (
-                <div key={project.repo} className={`project-grid-${project.id}`}>
+                <div key={project.repo} className={`grid-item project-${project.id}`}>
                     <a href={project.url} target='_blank'>
                         <h3 className='project-title'>{project.title}</h3>
+                        <img
+                            src={project.image}
+                            alt={(`Image of ${project.title} App`)}
+                            className='project-img'
+                        />
                     </a>
-                    <img
-                        src={project.image}
-                        alt={(`Image of ${project.title} App`)}
-                        className='project-img'
-                    />
                     <p className='project-feature'>{project.features}</p>
                     <a href={(`https://github.com/tchestnut85/${project.repo}`)} target='_blank' className='project-feature'>GitHub Repo</a>
                 </div>
