@@ -8,13 +8,50 @@ import Contact from './components/Contact';
 
 function App() {
 
+  const [sections] = useState([
+    {
+      id: '1',
+      name: 'About',
+    },
+    {
+      id: '2',
+      name: 'Portfolio',
+    },
+    {
+      id: '3',
+      name: 'Contact',
+    },
+    {
+      id: '4',
+      name: 'Resume',
+    }
+  ]);
+
+  const [currentSection, setCurrentSection] = useState(sections[0]);
+
+  function renderPage() {
+    switch (currentSection) {
+      case 'Portfolio':
+        return <Portfolio />;
+      case 'Contact':
+        return <Contact />;
+      // case 'Resume':
+      //   return <Resume />;
+      default:
+        return <About />;
+    }
+  }
+
   return (
     <div>
-      <Header></Header>
+      <Header
+        sections={sections}
+        currentSection={currentSection}
+        setCurrentSection={setCurrentSection}
+      >
+      </Header>
       <main>
-        <About></About>
-        <Portfolio></Portfolio>
-        <Contact></Contact>
+        {renderPage(currentSection)}
       </main>
       <Footer></Footer>
     </div>
