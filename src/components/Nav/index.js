@@ -10,8 +10,8 @@ function Nav(props) {
 
     return (
         <nav className='navbar'>
-            <h1>
-                <a href='/' className='my-name'>Tom Chestnut</a>
+            <h1 className='my-name list'>
+                Tom Chestnut
             </h1>
             <ul className='flex space-a'>
                 {sections.map((section) => (

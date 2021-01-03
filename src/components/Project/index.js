@@ -63,16 +63,16 @@ function Project() {
         <div className='project-grid'>
             {projects.map((project) => (
                 <div key={project.repo} className={`grid-item project-${project.id}`}>
-                    <a href={project.url} target='_blank'>
+                    <a href={project.url} target='_blank' rel='noreferrer'>
                         <h3 className='project-title'>{project.title}</h3>
                         <img
                             src={project.image}
-                            alt={(`Image of ${project.title} App`)}
+                            alt={(`Screenshot of ${project.title} App`)}
                             className='project-img'
                         />
                     </a>
                     <p className='project-feature'>{project.features}</p>
-                    <a href={(`https://github.com/tchestnut85/${project.repo}`)} target='_blank' className='project-feature'>GitHub Repo</a>
+                    <a href={(`https://github.com/tchestnut85/${project.repo}`)} target='_blank' rel='noreferrer' className='project-feature'>GitHub Repo</a>
                 </div>
             ))}
         </div >
