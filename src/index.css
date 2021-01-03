@@ -16,7 +16,7 @@
 
 main {
   margin: 0 auto;
-  padding: 10px 0 150px 0;
+  padding: 70px 0 150px 0;
   background-color: var(--primaryColor);
 }
 
@@ -28,7 +28,6 @@ a {
 .content {
   background-color: var(--secondColor);
   border-radius: 5px;
-  margin: 0 5%;
   padding: 2% 5%;
   color: whitesmoke;
   line-height: 2rem;
@@ -38,6 +37,7 @@ a {
 
 header {
   margin: auto;
+
 }
 
 nav li {
@@ -45,11 +45,14 @@ nav li {
 }
 
 .navbar {
-  padding: 2% 0;
+  padding: 1% 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: var(--secondColor)
+  background-color: var(--secondColor);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .my-name {
@@ -197,12 +200,12 @@ input:focus {
   box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
 }
 
-textarea {
+/* textarea {
 	width: 600px;
 	height: 120px;
 	border: 3px solid #cccccc;
 	padding: 5px;
-}
+} */
 
 /* RESUME SECTION */
 
@@ -242,6 +245,9 @@ textarea {
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  background-color: var(--secondColor);
+  border-radius: 5px;
+  padding: 2% 5% 5% 5%;
 }
 
 .skill-div {
@@ -386,7 +392,7 @@ textarea {
     padding: 3% 5% 0 5%;
   }
 
-   .bio {
+  .bio {
     font-size: 12px; 
     line-height: 1.5rem;
   }
@@ -396,6 +402,13 @@ textarea {
     grid-template-columns: repeat(1, 1fr);
   }
 
+  .resume-section p {
+    font-size: 14px;
+  }
+
+  .resume-section a {
+    font-size: 16px;
+  }
 }
 
 /* Medium Mobile Size */

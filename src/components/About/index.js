@@ -6,7 +6,7 @@ function About() {
         <section>
             <h2 className='heading'>About Me</h2>
             <div className='bio-container'>
-                <img className='my-pic' src={pic} alt='Picture of Tom Chestnut' />
+                <img className='my-pic' src={pic} alt='Tom Chestnut' />
                 <p className='bio'>
                     Hello! I'm Tom.
                     <br />
