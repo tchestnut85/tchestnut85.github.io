@@ -99,7 +99,7 @@ function Resume() {
             <div>
                 <h2 className='heading'>Resume</h2>
             </div>
-            <p className='content'>View or download my full resume
+            <p className='content resume-text'>View or download my full resume
                 <a className='resume-link' href='https://drive.google.com/file/d/1M4PNYrAi1U5XrBmbfFSP-DXe4pLXNSMs/view?usp=sharing' target='_blank' rel='noopener noreferrer'>here.</a>
             </p>
             <h3 className='heading'>My Skills</h3>

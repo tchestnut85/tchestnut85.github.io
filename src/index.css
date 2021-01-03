@@ -95,6 +95,7 @@ nav li {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
+  margin: 2% 0;
 }
 
 .bio {
@@ -102,7 +103,6 @@ nav li {
   background-color: var(--secondColor);
   max-width: 50%;
   border-radius: 5px;
-  margin: 2% 5% 0 0;
   padding: 2% 5%;
   color: whitesmoke;
   line-height: 2rem;
@@ -110,7 +110,9 @@ nav li {
 
 .my-pic {
   width: 20%;
+  min-width: 10%;
   height: 20%;
+  min-height: 10%;
   margin: 0 5%;
   border-radius: 2.5%;
 }
@@ -148,33 +150,35 @@ nav li {
 /* CONTACT SECTION */
 
 .contact-section {
-  padding: 10px 5%;
+  padding: 25px 5% 10px 5%;
+  /* margin: 0 350px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
 }
 
 .form-input {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 button {
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
   padding: 1rem 1.5rem;
   border-radius: .5rem;
   border: none;
   outline: none;
   cursor: pointer;
+  color: var(--fontColor);
   background-color: var(--thirdColor);
-  transition: color ease-in-out 0.5s, opacity ease-in-out 0.5s, background-color ease-in-out 0.5s;
+  transition: background-color ease-in-out 0.5s;
 }
 
 button:hover {
-  opacity: .8;
-  color: var(--fontColor);
   background-color: var(--secondColor);
 }
 
@@ -187,6 +191,7 @@ label {
 }
 
 input {
+  width: 400px;
   font-size: 1rem;
   padding: 0.25rem;
   border: 1px solid var(--dark);
@@ -197,15 +202,27 @@ input {
 
 input:focus {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  box-shadow: 0 0 .25rem rgba(224, 121, 121, 0.5);
 }
 
-/* textarea {
-	width: 600px;
-	height: 120px;
-	border: 3px solid #cccccc;
+.message-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+textarea {
+	width: 400px;
+  border: 1px solid var(--dark);
+  border-radius: 3px;
 	padding: 5px;
-} */
+}
+
+.error-message {
+  color: var(--fontColor);
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
 /* RESUME SECTION */
 
@@ -400,6 +417,14 @@ input:focus {
   .project-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  input,  textarea {
+    width: 200px;
+  }
+
+  .error-message {
+    font-size: 14px;
   }
 
   .resume-section p {

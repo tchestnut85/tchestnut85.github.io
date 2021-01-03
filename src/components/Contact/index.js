@@ -40,23 +40,23 @@ function Contact() {
             <h2 className='heading'>Contact Me</h2>
             <form id="contact-form" className='contact-section' onSubmit={messageSubmit}>
                 <div className='form-input'>
-                    <label htmlFor='name'>Name:</label>
-                    <input type='text' name='name' defaultValue={name} onBlur={messageChange}></input>
+                    {/* <label htmlFor='name'>Name:</label> */}
+                    <input type='text' name='name' defaultValue={name} onBlur={messageChange} placeholder='Your Name'></input>
                 </div>
                 <div className='form-input'>
-                    <label htmlFor='email'>Email:</label>
-                    <input type='email' name='email' defaultValue={email} onBlur={messageChange}></input>
+                    {/* <label htmlFor='email'>Email:</label> */}
+                    <input type='email' name='email' defaultValue={email} onBlur={messageChange} placeholder='Your Email'></input>
                 </div>
-                <div className=''>
-                    <label htmlFor='message'>Message:</label>
-                    <textarea name='message' rows='10' defaultValue={message} onBlur={messageChange} />
+                <div className='form-input message-div'>
+                    {/* <label htmlFor='message'>Message:</label> */}
+                    <textarea name='message' rows='5' defaultValue={message} onBlur={messageChange} placeholder='Your Message' />
                 </div>
+                <button type='submit'>Send</button>
                 {errorMessage && (
                     <div>
-                        <p>{errorMessage}</p>
+                        <p className='error-message'>{errorMessage}</p>
                     </div>
                 )}
-                <button type='submit'>Send</button>
             </form>
         </section>
     );
