@@ -44,16 +44,18 @@ function App() {
   }
 
   return (
-    <div>
-      <Header
-        sections={sections}
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      >
-      </Header>
-      <main>
-        {renderPage(currentSection)}
-      </main>
+    <div className='app-container'>
+      <div className='content-wrap'>
+        <Header
+          sections={sections}
+          currentSection={currentSection}
+          setCurrentSection={setCurrentSection}
+        >
+        </Header>
+        <main>
+          {renderPage(currentSection)}
+        </main>
+      </div>
       <Footer></Footer>
     </div>
   );

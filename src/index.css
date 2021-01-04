@@ -14,6 +14,17 @@
     font-family:  'Raleway', sans-serif;
 }
 
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--primaryColor);
+  }
+
+.content-wrap {
+  padding-bottom: 8rem;
+  background-color: var(--primaryColor);
+}
+
 main {
   margin: 0 auto;
   padding: 70px 0 150px 0;
@@ -175,11 +186,15 @@ button {
   cursor: pointer;
   color: var(--fontColor);
   background-color: var(--thirdColor);
-  transition: background-color ease-in-out 0.5s;
+  transition: background-color ease-in-out 0.5s, opacity;
 }
 
 button:hover {
   background-color: var(--secondColor);
+}
+
+button:active {
+  opacity: 0.5;
 }
 
 label {
@@ -294,9 +309,9 @@ textarea {
 .footer {
   background-color: var(--thirdColor); 
   width: 100%;
+  /* height: 10rem; */
   padding: 30px 75px;
-  /* margin-bottom: 0; */
-  /* position: fixed; */
+  position: absolute;
   bottom: 0;
 } 
 
@@ -320,10 +335,6 @@ textarea {
 .icon-link:hover {
   font-size: 65px;
   color: paleturquoise;
-}
-
-.link-name {
-  font-size: 20px;
 }
 
 /* UTILITY CLASSES */
@@ -434,11 +445,41 @@ textarea {
   .resume-section a {
     font-size: 16px;
   }
+
+  .footer span {
+    padding: 10px 30px;
+    border-radius: 10%;;
+    transition: background-color .5s ease-in-out;
+  }
+
+  .icon-link, .icon-link:visited {
+    font-size: 40px;
+  }
+
+  .icon-link:visited {
+    font-size: 40px;
+  }
+
+  .footer span:hover {
+    background-color: var(--secondColor);
+  }
+
+  .icon-link:hover {
+    font-size: 45px;
+    color: none;
+  }
 }
 
 /* Medium Mobile Size */
 @media screen and (max-width: 375px) {
     .navbar h1, .navbar ul li span {
     font-size: 70%;
+  }
+}
+
+/* Small Mobile Size */
+@media screen and (max-width: 340px) {
+  .footer span {
+    padding: 10px 20px;
   }
 }
