@@ -15,7 +15,8 @@ function Project() {
             url: 'https://passthepage.herokuapp.com/',
             repo: 'pass-the-page',
             image: photo1,
-            features: 'Full Stack, MVC, MySQL, RESTful API'
+            features: 'Full Stack, MVC, MySQL, RESTful API',
+            type: 'full-stack'
         },
         {
             id: '2',
@@ -23,7 +24,8 @@ function Project() {
             url: 'https://cfsylvester.github.io/AniGame/',
             repo: 'AniGame',
             image: photo2,
-            features: 'Front-End, AJAX, APIs, Bulma'
+            features: 'Front-End, AJAX, APIs, Bulma',
+            type: 'front-end'
         },
         {
             id: '3',
@@ -31,7 +33,8 @@ function Project() {
             url: 'https://code-zone.herokuapp.com/',
             repo: 'code-zone',
             image: photo3,
-            features: 'Full Stack, MVC, MySQL, RESTful API'
+            features: 'Full Stack, MVC, MySQL, RESTful API',
+            type: 'full-stack'
         },
         {
             id: '4',
@@ -39,7 +42,8 @@ function Project() {
             url: 'http://bit.ly/social-tc',
             repo: 'social-network',
             image: photo4,
-            features: 'Back-End, MongoDB, RESTful API'
+            features: 'Back-End, MongoDB, RESTful API',
+            type: 'back-end'
         },
         {
             id: '5',
@@ -47,7 +51,8 @@ function Project() {
             url: 'http://bit.ly/teambuilder-tc',
             repo: 'team-builder',
             image: photo5,
-            features: 'Back-End, Node.js, Inquirer.js'
+            features: 'Back-End, Node.js, Inquirer.js',
+            type: 'back-end'
         },
         {
             id: '6',
@@ -55,7 +60,8 @@ function Project() {
             url: 'http://bit.ly/weatherapp-tc',
             repo: 'weather-dashboard',
             image: photo6,
-            features: 'Front-End, AJAX, Bootstrap'
+            features: 'Front-End, AJAX, Bootstrap',
+            type: 'front-end'
         }
     ];
 
@@ -71,10 +77,20 @@ function Project() {
                             className='project-img'
                         />
                     </a>
-                    <p className='project-feature'>{project.features}</p>
-                    <a href={(`https://github.com/tchestnut85/${project.repo}`)} target='_blank' rel='noreferrer' className='project-feature'>GitHub Repo</a>
+                    <div>
+                        <p className='project-feature'>{project.features}</p>
+                    </div>
+                    <div className='repo-link-wrap'>
+                        {project.type === 'back-end' ?
+                            <a href={project.url} target='_blank' rel='noreferrer'>View Demo</a>
+                            :
+                            <a href={project.url} target='_blank' rel='noreferrer'>Visit App</a>
+                        }
+                        <a href={(`https://github.com/tchestnut85/${project.repo}`)} target='_blank' rel='noreferrer' className='project-repo'>GitHub Repo</a>
+                    </div>
                 </div>
-            ))}
+            ))
+            }
         </div >
     );
 }
