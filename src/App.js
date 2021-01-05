@@ -5,6 +5,7 @@ import About from './components/About';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
     }
   ]);
 
-  const [currentSection, setCurrentSection] = useState(sections[0]);
+  const [currentSection, setCurrentSection] = useState('About');
 
   function renderPage() {
     switch (currentSection) {
@@ -35,24 +36,26 @@ function App() {
         return <Portfolio />;
       case 'Contact':
         return <Contact />;
-      // case 'Resume':
-      //   return <Resume />;
+      case 'Resume':
+        return <Resume />;
       default:
         return <About />;
     }
   }
 
   return (
-    <div>
-      <Header
-        sections={sections}
-        currentSection={currentSection}
-        setCurrentSection={setCurrentSection}
-      >
-      </Header>
-      <main>
-        {renderPage(currentSection)}
-      </main>
+    <div className='app-container'>
+      <div className='content-wrap'>
+        <Header
+          sections={sections}
+          currentSection={currentSection}
+          setCurrentSection={setCurrentSection}
+        >
+        </Header>
+        <main>
+          {renderPage(currentSection)}
+        </main>
+      </div>
       <Footer></Footer>
     </div>
   );
