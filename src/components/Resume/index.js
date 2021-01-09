@@ -1,96 +1,79 @@
 import React from 'react';
-import icon1 from '../../assets/skill-icons/javascript.svg';
-import icon2 from '../../assets/skill-icons/css.svg';
-import icon3 from '../../assets/skill-icons/html-5.svg';
-import icon4 from '../../assets/skill-icons/jquery.svg';
-import icon5 from '../../assets/skill-icons/nodejs.svg';
-import icon6 from '../../assets/skill-icons/express.svg';
-import icon7 from '../../assets/skill-icons/handlebars.svg';
-import icon8 from '../../assets/skill-icons/bootstrap.svg';
-import icon9 from '../../assets/skill-icons/materializecss.svg';
-import icon10 from '../../assets/skill-icons/bulma.svg';
-import icon11 from '../../assets/skill-icons/sequelize.svg';
-import icon12 from '../../assets/skill-icons/mongodb.svg';
-import icon13 from '../../assets/skill-icons/mongoose.png';
-import icon14 from '../../assets/skill-icons/jest.svg';
-import icon15 from '../../assets/skill-icons/git-icon.svg';
-import icon16 from '../../assets/skill-icons/webpack.svg';
-import icon17 from '../../assets/skill-icons/react.svg';
-import icon18 from '../../assets/skill-icons/mysql.svg';
 
 function Resume() {
     const skills = [
         {
             name: 'Javascript',
-            icon: icon1
+            file: 'javascript.svg'
         },
         {
             name: 'CSS',
-            icon: icon2
+            file: 'css.svg'
         },
         {
             name: 'HTML',
-            icon: icon3
+            file: 'html-5.svg'
         },
         {
             name: 'jQuery',
-            icon: icon4
+            file: 'jquery.svg'
         },
         {
             name: 'React',
-            icon: icon17
+
+            file: 'react.svg'
         },
         {
             name: 'Node',
-            icon: icon5
+            file: 'nodejs.svg'
         },
         {
             name: 'Express',
-            icon: icon6
+            file: 'express.svg'
         },
         {
             name: 'Handlebars',
-            icon: icon7
+            file: 'handlebars.svg'
         },
         {
             name: 'Bootstrap',
-            icon: icon8
+            file: 'bootstrap.svg'
         },
         {
             name: 'Materialize',
-            icon: icon9
+            file: 'materializecss.svg'
         },
         {
             name: 'Bulma',
-            icon: icon10
+            file: 'bulma.svg'
         },
         {
             name: 'MySQL',
-            icon: icon18
+            file: 'mysql.svg'
         },
         {
             name: 'Sequelize',
-            icon: icon11
+            file: 'sequelize.svg'
         },
         {
             name: 'MongoDB',
-            icon: icon12
+            file: 'mongodb.svg'
         },
         {
             name: 'Mongoose',
-            icon: icon13
+            file: 'mongoose.png'
         },
         {
             name: 'Jest',
-            icon: icon14
+            file: 'jest.svg'
         },
         {
             name: 'Git',
-            icon: icon15
+            file: 'git-icon.svg'
         },
         {
             name: 'Webpack',
-            icon: icon16
+            file: 'webpack.svg'
         }
     ];
 
@@ -106,7 +89,7 @@ function Resume() {
             <div className='icon-list'>
                 {skills.map((skill) => (
                     <div key={skill.name} className='skill-div flex space-b'>
-                        <img src={skill.icon} className='skill-icon' alt={`Icon for ${skill.name}`} />
+                        <img src={require(`../../assets/skill-icons/${skill.file}`).default} className='skill-icon' alt={`Icon for ${skill.name}`} />
                         <span className='skill-text'>{skill.name}</span>
                     </div>
                 ))}
