@@ -29,7 +29,7 @@ function Resume() {
         },
         {
             name: 'Express',
-            file: 'express.svg'
+            file: 'expressjs.svg'
         },
         {
             name: 'Handlebars',
