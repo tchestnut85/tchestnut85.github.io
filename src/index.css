@@ -406,8 +406,18 @@ textarea {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1250px) {
+  .icon-list {
+    padding: 2% 15% 5% 15%;
+  }
+}
+
 /* Tablet Size */
 @media screen and (max-width: 768px) {
+  .icon-list {
+    padding: 2% 5% 5% 5%;
+  }
+
   .project-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
