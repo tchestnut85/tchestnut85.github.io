@@ -8,12 +8,17 @@ function Resume() {
             type: 'front-end'
         },
         {
-            name: 'HTML',
+            name: 'React',
+            file: 'react.svg',
+            type: 'front-end'
+        },
+        {
+            name: 'HTML5',
             file: 'html-5.svg',
             type: 'front-end'
         },
         {
-            name: 'CSS',
+            name: 'CSS3',
             file: 'css.svg',
             type: 'front-end'
         },
@@ -23,23 +28,18 @@ function Resume() {
             type: 'front-end'
         },
         {
-            name: 'React',
-            file: 'react.svg',
-            type: 'front-end'
-        },
-        {
-            name: 'Node',
+            name: 'Node.js',
             file: 'nodejs.svg',
             type: 'back-end'
         },
         {
-            name: 'Express',
+            name: 'Express.js',
             file: 'expressjs.svg',
             type: 'back-end'
         },
         {
-            name: 'Handlebars',
-            file: 'handlebars.svg',
+            name: 'Redux',
+            file: 'redux.svg',
             type: 'front-end'
         },
         {
@@ -58,14 +58,14 @@ function Resume() {
             type: 'front-end'
         },
         {
-            name: 'MySQL',
-            file: 'mysql.svg',
-            type: 'back-end'
+            name: 'Handlebars',
+            file: 'handlebars.svg',
+            type: 'front-end'
         },
         {
-            name: 'Sequelize',
-            file: 'sequelize.svg',
-            type: 'back-end'
+            name: 'Jest',
+            file: 'jest.svg',
+            type: 'front-end'
         },
         {
             name: 'MongoDB',
@@ -78,8 +78,23 @@ function Resume() {
             type: 'back-end'
         },
         {
-            name: 'Jest',
-            file: 'jest.svg',
+            name: 'GraphQL',
+            file: 'graphql.svg',
+            type: 'back-end'
+        },
+        {
+            name: 'Apollo Server',
+            file: 'apollo.svg',
+            type: 'back-end'
+        },
+        {
+            name: 'MySQL',
+            file: 'mysql.svg',
+            type: 'back-end'
+        },
+        {
+            name: 'Sequelize',
+            file: 'sequelize.svg',
             type: 'back-end'
         },
         {

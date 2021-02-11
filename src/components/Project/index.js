@@ -56,24 +56,24 @@ function Project() {
             features: 'Full-Stack MERN App, JavaScript, React, MongoDB, Express.js, Node.js, GraphQL API, Apollo Server, JWT',
             type: 'full-stack'
         },
-        {
-            id: '4',
-            title: 'Social Network Backend',
-            url: 'http://bit.ly/social-tc',
-            repo: 'social-network',
-            image: photo4,
-            features: 'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
-            type: 'back-end'
-        },
-        {
-            id: '5',
-            title: 'Team Builder',
-            url: 'http://bit.ly/teambuilder-tc',
-            repo: 'team-builder',
-            image: photo5,
-            features: 'Back-End, JavaScript, Node.js, CSS, Inquirer.js, HTML Generator',
-            type: 'back-end'
-        },
+        // {
+        //     id: '4',
+        //     title: 'Social Network Backend',
+        //     url: 'http://bit.ly/social-tc',
+        //     repo: 'social-network',
+        //     image: photo4,
+        //     features: 'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
+        //     type: 'back-end'
+        // },
+        // {
+        //     id: '5',
+        //     title: 'Team Builder',
+        //     url: 'http://bit.ly/teambuilder-tc',
+        //     repo: 'team-builder',
+        //     image: photo5,
+        //     features: 'Back-End, JavaScript, Node.js, CSS, Inquirer.js, HTML Generator',
+        //     type: 'back-end'
+        // },
         {
             id: '6',
             title: 'Weather Dashboard',
