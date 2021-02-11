@@ -5,17 +5,28 @@ import photo3 from '../../assets/images/code-zone.png';
 import photo4 from '../../assets/images/social-network.png';
 import photo5 from '../../assets/images/team-builder.png';
 import photo6 from '../../assets/images/weather-dashboard.png';
+import photo7 from '../../assets/images/lite-speed.png';
+import photo8 from '../../assets/images/book-search.png';
 
 function Project() {
 
     const projects = [
+        {
+            id: '7',
+            title: 'Lite Speed',
+            url: 'https://lite-speed.herokuapp.com/',
+            repo: 'lite-speed',
+            image: photo7,
+            features: 'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
+            type: 'full-stack'
+        },
         {
             id: '1',
             title: 'Pass the Page',
             url: 'https://passthepage.herokuapp.com/',
             repo: 'pass-the-page',
             image: photo1,
-            features: 'Full Stack, MVC, MySQL, RESTful API',
+            features: 'Full Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
             type: 'full-stack'
         },
         {
@@ -24,7 +35,7 @@ function Project() {
             url: 'https://cfsylvester.github.io/AniGame/',
             repo: 'AniGame',
             image: photo2,
-            features: 'Front-End, AJAX, APIs, Bulma',
+            features: 'JavaScript, jQuery, HTML, CSS, Bulma Framework, GameSpot API, RAWG API, Kitsu API, AJAX',
             type: 'front-end'
         },
         {
@@ -33,7 +44,16 @@ function Project() {
             url: 'https://code-zone.herokuapp.com/',
             repo: 'code-zone',
             image: photo3,
-            features: 'Full Stack, MVC, MySQL, RESTful API',
+            features: 'Full Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, MVC',
+            type: 'full-stack'
+        },
+        {
+            id: '8',
+            title: 'Book Search',
+            url: 'https://booksearch-tc.herokuapp.com/',
+            repo: 'book-search',
+            image: photo8,
+            features: 'Full-Stack MERN App, JavaScript, React, MongoDB, Express.js, Node.js, GraphQL API, Apollo Server, JWT',
             type: 'full-stack'
         },
         {
@@ -42,7 +62,7 @@ function Project() {
             url: 'http://bit.ly/social-tc',
             repo: 'social-network',
             image: photo4,
-            features: 'Back-End, MongoDB, RESTful API',
+            features: 'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
             type: 'back-end'
         },
         {
@@ -51,7 +71,7 @@ function Project() {
             url: 'http://bit.ly/teambuilder-tc',
             repo: 'team-builder',
             image: photo5,
-            features: 'Back-End, Node.js, Inquirer.js',
+            features: 'Back-End, JavaScript, Node.js, CSS, Inquirer.js, HTML Generator',
             type: 'back-end'
         },
         {
@@ -60,7 +80,7 @@ function Project() {
             url: 'http://bit.ly/weatherapp-tc',
             repo: 'weather-dashboard',
             image: photo6,
-            features: 'Front-End, AJAX, Bootstrap',
+            features: 'Front-End, JavaScript, CSS, Bootstrap, OpenWeather API, AJAX',
             type: 'front-end'
         }
     ];
@@ -69,16 +89,20 @@ function Project() {
         <div className='project-grid'>
             {projects.map((project) => (
                 <div key={project.repo} className={`grid-item project-${project.id}`}>
-                    <a href={project.url} target='_blank' rel='noreferrer'>
-                        <h3 className='project-title'>{project.title}</h3>
-                        <img
-                            src={project.image}
-                            alt={(`Screenshot of ${project.title} App`)}
-                            className='project-img'
-                        />
-                    </a>
-                    <div>
-                        <p className='project-feature'>{project.features}</p>
+                    {/* <a href={project.url} target='_blank' rel='noreferrer'> */}
+                    <h2 className='project-title'>{project.title}</h2>
+                    <div className='card-body'>
+                        <div>
+                            <img
+                                src={project.image}
+                                alt={(`Screenshot of ${project.title} App`)}
+                                className='project-img'
+                            />
+                        </div>
+                        {/* </a> */}
+                        <div>
+                            <p className='project-feature'>{project.features}</p>
+                        </div>
                     </div>
                     <div className='repo-link-wrap'>
                         {project.type === 'back-end' ?

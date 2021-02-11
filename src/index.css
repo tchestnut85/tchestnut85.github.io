@@ -1,10 +1,16 @@
 /* GENERAL STYLES */
 
 :root {
+  /* --primaryColor: #52796f; */
   --primaryColor: teal;
-  --secondColor: rgb(6, 95, 107);
-  --thirdColor: rgb(143, 69, 143); 
+  --secondColor: #354f52;
+  --thirdColor: #74c69d; 
   --fontColor: whitesmoke;
+  --fontSecond: #2f3e46;
+  /* --primaryColor: teal; */
+  /* --secondColor: rgb(6, 95, 107); */
+  /* --thirdColor: rgb(143, 69, 143);  */
+  /* --fontColor: whitesmoke; */
 }
 
 * {
@@ -120,10 +126,9 @@ nav li {
 }
 
 .my-pic {
-  width: 20%;
-  min-width: 10%;
-  height: 20%;
-  min-height: 10%;
+  align-self: flex-start;
+  width: 35%;
+  min-width: 250px;
   margin: 0 5%;
   border-radius: 2.5%;
 }
@@ -141,52 +146,75 @@ nav li {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px 15px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 45px 45px;
 }
 
 .grid-item {
+  width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
-  border-radius: 1%;
+  align-content: center;
+  border-radius: 5px;
   background-color: var(--thirdColor);
   padding: 5px 5px 10px 5px;
+  box-shadow: 2px 2px 5px var(--secondColor, 0.5); 
   transition: box-shadow ease-in-out .2s;
 }
 
 .grid-item:hover {
-  box-shadow: 3px 3px 10px var(--secondColor); 
+  box-shadow: 5px 5px 15px var(--secondColor, 0.5); 
 }
 
 .grid-item a {
-  transition: color .5s ease-in-out, font-weight .5s ease-in-out;
+  padding: 15px 15px;
+  border-radius: 5px;
+  background-color: var(--secondColor);
+  transition: background-color .3s ease-in-out;
 }
 
 .grid-item a:hover {
-  color: var(--primaryColor);
-  font-weight: bold;
+  background-color: var(--primaryColor);
+}
+
+.card-body {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-title {
+  color: var(--fontColor);
   padding: 7px 0;
+  transition: color .5s ease-in-out;
+  margin: 10px 10px;
 }
 
 .project-img {
+  align-self: center;
   width: 200px;
   height: 150px;
-  border-radius: 1%;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
 .project-feature {
-  margin: 0 15px;
+  text-align: center;
+  margin-left: 15px;
+  background-color: var(--secondColor);
+  border-radius: 5px;
   padding: 10px 5px;
-  border-bottom: 1px solid var(--fontColor);
-  color: var(--fontColor)
+  color: var(--fontColor);
 }
 
 .repo-link-wrap {
+  margin: 5px 25px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
   padding-top: 10px;
 }
 
@@ -355,9 +383,10 @@ textarea {
 
 .icon-link, .icon-link:visited {
   text-decoration: none;
-  color: var(--fontColor);
+  color: var(--fontSecond);
   font-size: 50px;
-  transition: font-size .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out;
+  /* transition: font-size .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out; */
+  transition: background-color .5s ease-in-out;
 }
 
 .footer span:hover {
@@ -365,7 +394,7 @@ textarea {
 }
 
 .icon-link:hover {
-  font-size: 65px;
+  /* font-size: 65px; */
   color: paleturquoise;
 }
 
@@ -412,19 +441,19 @@ textarea {
   }
 }
 
+@media screen and (max-width: 1068px) {
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 /* Tablet Size */
 @media screen and (max-width: 768px) {
   .icon-list {
     padding: 2% 5% 5% 5%;
   }
 
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .grid-item {
-    border-radius: 5%;
     background-color: var(--thirdColor);
     box-shadow: 5px 10px 5px var(--secondColor);
   }
@@ -440,8 +469,9 @@ textarea {
   }
 
   .my-pic {
+    align-self: center;
     width: 25%;
-    height: 25%;
+    min-width: 200px;
   }
 
 }
@@ -466,9 +496,8 @@ textarea {
     line-height: 1.5rem;
   }
 
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  .grid-item {
+    width: 350px;
   }
 
   input,  textarea {
@@ -513,8 +542,12 @@ textarea {
 
 /* Medium Mobile Size */
 @media screen and (max-width: 375px) {
-    .navbar h1, .navbar ul li span {
+  .navbar h1, .navbar ul li span {
     font-size: 70%;
+  }
+
+  .grid-item {
+    width: 300px;
   }
 }
 
