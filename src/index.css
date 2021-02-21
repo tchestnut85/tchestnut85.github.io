@@ -229,6 +229,27 @@ nav li {
   border-radius: 5px;
 }
 
+.email-section, .linkedin-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 5px 100px 15px 100px;
+  margin-bottom: 25px;
+}
+
+.email, .linkedin {
+  font-size: 15px;
+  margin: 0 15% 0 15%;
+  color: whitesmoke;
+  background-color: var(--thirdColor);
+  border-radius: 5px;
+  transition: background-color .25s ease-in-out;
+}
+
+.email:hover, .linkedin:hover {
+  background-color: var(--primaryColor);
+}
+
 .form-input {
   margin-bottom: 25px;
 }
@@ -300,7 +321,7 @@ textarea {
 
 /* RESUME SECTION */
 
-.resume-section {
+.resume-section, .contact-me-section {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -476,6 +497,10 @@ textarea {
     min-width: 200px;
   }
 
+  .email, .linkedin {
+    margin: 0 5% 0 5%;
+  }
+
 }
 
 /* Large Mobile Size */
@@ -516,6 +541,15 @@ textarea {
 
   .resume-section a {
     font-size: 16px;
+  }
+
+  .email-section, .linkedin-section {
+    padding: 5px 10px 15px 10px;
+    /* padding: 0; */
+  }
+
+  .email, .linkedin {
+    margin: 0 2% 0 2%;
   }
 
   .footer span {
