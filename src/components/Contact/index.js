@@ -9,19 +9,27 @@ function Contact() {
 
     const copyEmail = () => {
         const email = document.getElementById('email');
-        const range = document.createRange();
-        range.selectNodeContents(email);
-        window.getSelection().addRange(range);
+        // const range = document.createRange();
+        // range.selectNodeContents(email);
+        // window.getSelection().addRange(range);
 
-        try {
-            const success = document.execCommand('copy');
-            const message = success ? 'Email Copied!' : "Email wasn't copied";
+        // try {
+        //     const success = document.execCommand('copy');
+        //     const message = success ? 'Email Copied!' : "Email wasn't copied";
+        //     console.log(message);
+        // } catch (err) {
+        //     console.error('Unable to copy email.', err);
+        // }
+
+        // window.getSelection().removeAllRanges();
+
+
+        navigator.clipboard.writeText(email.textContent).then(() => {
+            const message = 'Email Copied!';
             console.log(message);
-        } catch (err) {
-            console.error('Unable to copy email.', err);
-        }
-
-        window.getSelection().removeAllRanges();
+        }).catch(error => {
+            console.log('Email not copied:', error);
+        });
 
         if (email) {
             setEmailCopied('Email Copied!');
@@ -40,7 +48,7 @@ function Contact() {
                 <div className='content email-section'>Contact me at:
                     <div className='email'>
                         <a id='email' href="mailto:thomaschestnut00@gmail.com">thomaschestnut00@gmail.com</a>
-                        <button onClick={copyEmail} className='email-btn'><FontAwesomeIcon icon={faCopy} /></button>
+                        <button className='email-btn'><FontAwesomeIcon onClick={copyEmail} icon={faCopy} /></button>
                     </div>
                 </div>
                 {emailCopied && (

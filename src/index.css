@@ -233,13 +233,13 @@ nav li {
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin: 5px 100px 15px 100px;
-  margin-bottom: 25px;
+  margin: 5px 300px 25px 300px;
 }
 
 .email, .linkedin {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   font-size: 15px;
   margin: 0 15% 0 15%;
@@ -481,6 +481,12 @@ textarea {
 }
 
 /* MEDIA QUERIES */
+
+@media screen and (max-width: 1300px) {
+  .email-section, .linkedin-section {
+    margin: 5px 100px 15px 100px;
+  }
+}
 
 @media screen and (max-width: 1250px) {
   .icon-list {
