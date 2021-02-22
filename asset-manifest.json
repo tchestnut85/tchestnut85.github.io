@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.c9813f9f.chunk.css",
-    "main.js": "/static/js/main.2f7652ff.chunk.js",
-    "main.js.map": "/static/js/main.2f7652ff.chunk.js.map",
+    "main.css": "/static/css/main.ac1ad85d.chunk.css",
+    "main.js": "/static/js/main.af0151a7.chunk.js",
+    "main.js.map": "/static/js/main.af0151a7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5468d144.js",
     "runtime-main.js.map": "/static/js/runtime-main.5468d144.js.map",
     "static/js/2.0124866d.chunk.js": "/static/js/2.0124866d.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.7b81ed85.chunk.js": "/static/js/3.7b81ed85.chunk.js",
     "static/js/3.7b81ed85.chunk.js.map": "/static/js/3.7b81ed85.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.c9813f9f.chunk.css.map": "/static/css/main.c9813f9f.chunk.css.map",
+    "static/css/main.ac1ad85d.chunk.css.map": "/static/css/main.ac1ad85d.chunk.css.map",
     "static/js/2.0124866d.chunk.js.LICENSE.txt": "/static/js/2.0124866d.chunk.js.LICENSE.txt",
     "static/media/AniGame.5fc95ccf.png": "/static/media/AniGame.5fc95ccf.png",
     "static/media/apollo.svg": "/static/media/apollo.bf29e599.svg",
@@ -47,7 +47,7 @@
   "entrypoints": [
     "static/js/runtime-main.5468d144.js",
     "static/js/2.0124866d.chunk.js",
-    "static/css/main.c9813f9f.chunk.css",
-    "static/js/main.2f7652ff.chunk.js"
+    "static/css/main.ac1ad85d.chunk.css",
+    "static/js/main.af0151a7.chunk.js"
   ]
 }
