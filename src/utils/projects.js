@@ -32,7 +32,7 @@ const projects = [
         url: 'https://cfsylvester.github.io/AniGame/',
         repo: 'AniGame',
         image: photo2,
-        features: 'JavaScript, jQuery, HTML, CSS, Bulma Framework, GameSpot API, RAWG API, Kitsu API, AJAX',
+        features: 'JavaScript, jQuery, HTML, CSS, Bulma Framework, GameSpot API, RAWG API, Kitsu API',
         type: 'front-end'
     },
     {
@@ -53,15 +53,15 @@ const projects = [
         features: 'Full-Stack MERN App, JavaScript, React, MongoDB, Express.js, Node.js, GraphQL API, Apollo Server, JWT',
         type: 'full-stack'
     },
-    // {
-    //     id: '4',
-    //     title: 'Social Network Backend',
-    //     url: 'http://bit.ly/social-tc',
-    //     repo: 'social-network',
-    //     image: photo4,
-    //     features: 'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
-    //     type: 'back-end'
-    // },
+    {
+        id: '4',
+        title: 'Social Network Backend',
+        url: 'http://bit.ly/social-tc',
+        repo: 'social-network',
+        image: photo4,
+        features: 'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
+        type: 'back-end'
+    },
     // {
     //     id: '5',
     //     title: 'Team Builder',
@@ -71,15 +71,15 @@ const projects = [
     //     features: 'Back-End, JavaScript, Node.js, CSS, Inquirer.js, HTML Generator',
     //     type: 'back-end'
     // },
-    {
-        id: '6',
-        title: 'Weather Dashboard',
-        url: 'http://bit.ly/weatherapp-tc',
-        repo: 'weather-dashboard',
-        image: photo6,
-        features: 'Front-End, JavaScript, CSS, Bootstrap, OpenWeather API, AJAX',
-        type: 'front-end'
-    }
+    // {
+    //     id: '6',
+    //     title: 'Weather Dashboard',
+    //     url: 'http://bit.ly/weatherapp-tc',
+    //     repo: 'weather-dashboard',
+    //     image: photo6,
+    //     features: 'Front-End, JavaScript, CSS, Bootstrap, OpenWeather API, AJAX',
+    //     type: 'front-end'
+    // }
 ];
 
 export default projects;

@@ -1,6 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-regular-svg-icons';
 
 function Contact() {
+
+    const [emailCopied, setEmailCopied] = useState('');
+
+    const copyEmail = () => {
+        const email = document.getElementById('email');
+        const range = document.createRange();
+        range.selectNodeContents(email);
+        window.getSelection().addRange(range);
+
+        try {
+            const success = document.execCommand('copy');
+            const message = success ? 'Email Copied!' : "Email wasn't copied";
+            console.log(message);
+        } catch (err) {
+            console.error('Unable to copy email.', err);
+        }
+
+        window.getSelection().removeAllRanges();
+
+        if (email) {
+            setEmailCopied('Email Copied!');
+        } else {
+            setEmailCopied('');
+        }
+    };
 
     return (
         <section className='contact-me-section'>
@@ -9,9 +37,17 @@ function Contact() {
                 <div>
                     <h3 className='heading'>Email</h3>
                 </div>
-                <p className='content email-section'>Contact me at:
-                    <a className='email' href="mailto:thomaschestnut00@gmail.com">thomaschestnut00@gmail.com</a>
-                </p>
+                <div className='content email-section'>Contact me at:
+                    <div className='email'>
+                        <a id='email' href="mailto:thomaschestnut00@gmail.com">thomaschestnut00@gmail.com</a>
+                        <button onClick={copyEmail} className='email-btn'><FontAwesomeIcon icon={faCopy} /></button>
+                    </div>
+                </div>
+                {emailCopied && (
+                    <span className='email-message'>
+                        {emailCopied}
+                    </span>
+                )}
                 <div>
                     <h3 className='heading'>LinkedIn</h3>
                 </div>

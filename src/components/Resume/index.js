@@ -12,7 +12,7 @@ function Resume() {
                 <h2 className='heading'>Resume</h2>
             </div>
             <p className='content resume-text'>View or download my full resume
-                <a className='resume-link' href='https://drive.google.com/file/d/1M4PNYrAi1U5XrBmbfFSP-DXe4pLXNSMs/view?usp=sharing' target='_blank' rel='noopener noreferrer'>here.</a>
+                <a className='resume-link' href='https://drive.google.com/file/d/1T4csk2NF2oBVHjoU4tNCq6LKpq1QQG4L/view?usp=sharing' target='_blank' rel='noopener noreferrer'>here.</a>
             </p>
             <h3 className='heading'>Front-End Skills</h3>
             <div className='icon-list'>

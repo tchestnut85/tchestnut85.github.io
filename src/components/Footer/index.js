@@ -16,12 +16,12 @@ function Footer() {
             url: 'https://github.com/tchestnut85',
             icon: 'github-square'
         },
-        // {
-        //     id: 'link-3',
-        //     name: 'HackerRank',
-        //     url: 'https://www.hackerrank.com/tchestnut85',
-        //     icon: 'hackerrank'
-        // },
+        {
+            id: 'link-3',
+            name: 'HackerRank',
+            url: 'https://www.hackerrank.com/tchestnut85',
+            icon: 'hackerrank'
+        },
         {
             id: 'link-4',
             name: 'Stack Overflow',

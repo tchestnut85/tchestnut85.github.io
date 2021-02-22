@@ -1,5 +1,5 @@
 # My Portfolio
-<a href="https://tchestnut85.github.io/react-portfolio/">![Deployed App](https://img.shields.io/badge/Deployed%20App-blue.svg)</a> 
+<a href="https://tomchestnut.dev/">![Deployed App](https://img.shields.io/badge/My%20Portfolio-teal.svg?style=for-the-badge)</a> <a href='https://www.linkedin.com/in/thomas-chestnut/'>![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)</a>
 
 ## Description
  This is my personal portfolio displaying projects I've created, my skills, a link to my resume  and a contact form to get in touch with me. There are also links to some of my social media profiles including LinkedIn, GitHub and others.
