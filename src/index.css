@@ -37,10 +37,6 @@ main {
 	background-color: var(--primaryColor);
 }
 
-body {
-	background-color: var(--primaryColor);
-}
-
 a {
 	text-decoration: none;
 	color: var(--fontColor);
@@ -58,6 +54,7 @@ a {
 
 header {
 	margin: auto;
+	padding-bottom: 1rem;
 }
 
 nav li {
@@ -468,7 +465,7 @@ textarea {
 .heading {
 	text-align: center;
 	padding: 3% 5% 0 5%;
-	margin: 65px 30% 25px 30%;
+	margin: 3rem 30% 25px 30%;
 	color: var(--fontColor);
 	background-color: var(--primaryColor);
 	border-bottom: 1px solid var(--fontColor);
