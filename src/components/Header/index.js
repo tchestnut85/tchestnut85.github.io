@@ -1,16 +1,10 @@
 import Nav from '../Nav';
 import React from 'react';
 
-function Header(props) {
-	const { sections, currentSection, setCurrentSection } = props;
-
+function Header() {
 	return (
 		<header>
-			<Nav
-				sections={sections}
-				currentSection={currentSection}
-				setCurrentSection={setCurrentSection}
-			/>
+			<Nav />
 		</header>
 	);
 }

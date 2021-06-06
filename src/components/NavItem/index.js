@@ -1,7 +1,11 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
 import React from 'react';
 
-const NavItem = ({ section, currentSection, setCurrentSection }) => {
+const NavItem = ({ section }) => {
+	const { pathname } = useLocation();
+	const currentPage = pathname === '/' ? 'about' : pathname.slice(1);
+
 	return (
 		<>
 			<Link
@@ -9,16 +13,18 @@ const NavItem = ({ section, currentSection, setCurrentSection }) => {
 				key={section}
 			>
 				<li
-					key={section}
 					className={
-						currentSection === section ? 'active list' : 'list'
+						currentPage === section.toLowerCase()
+							? 'active list'
+							: 'list'
 					}
 				>
 					<span
 						className={
-							currentSection === section ? '' : 'list-hover'
+							currentPage === section.toLowerCase()
+								? ''
+								: 'list-hover'
 						}
-						onClick={() => setCurrentSection(section)}
 					>
 						{section}
 					</span>
