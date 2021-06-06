@@ -1,9 +1,9 @@
 import photo1 from '../assets/images/pass-the-page.png';
+import photo10 from '../assets/images/deep-thoughts.png';
 import photo2 from '../assets/images/AniGame.png';
 import photo3 from '../assets/images/code-zone.png';
-import photo4 from '../assets/images/social-network.png';
 import photo7 from '../assets/images/lite-speed.png';
-import photo8 from '../assets/images/book-search.png';
+import photo9 from '../assets/images/todo-app.png';
 
 const projects = [
 	{
@@ -23,7 +23,7 @@ const projects = [
 		repo: 'pass-the-page',
 		image: photo1,
 		features:
-			'Full Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
+			'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
 		type: 'full-stack',
 	},
 	{
@@ -37,35 +37,55 @@ const projects = [
 		type: 'front-end',
 	},
 	{
+		id: 9,
+		title: 'ToDo App',
+		url: 'https://todoapp-tc.herokuapp.com/',
+		repo: 'to-do-app',
+		image: photo9,
+		features:
+			'Full-Stack MERN App, JavaScript, React, React Context, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
+		type: 'full-stack',
+	},
+	{
+		id: 10,
+		title: 'Deep Thoughts',
+		url: 'https://deepthoughts-tc.herokuapp.com/',
+		repo: 'deep-thoughts',
+		image: photo10,
+		features:
+			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
+		type: 'full-stack',
+	},
+	{
 		id: '3',
 		title: 'Code Zone',
 		url: 'https://code-zone.herokuapp.com/',
 		repo: 'code-zone',
 		image: photo3,
 		features:
-			'Full Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, MVC',
+			'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, MVC',
 		type: 'full-stack',
 	},
-	{
-		id: '8',
-		title: 'Book Search',
-		url: 'https://booksearch-tc.herokuapp.com/',
-		repo: 'book-search',
-		image: photo8,
-		features:
-			'Full-Stack MERN App, JavaScript, React, MongoDB, Express.js, Node.js, GraphQL API, Apollo Server, JWT',
-		type: 'full-stack',
-	},
-	{
-		id: '4',
-		title: 'Social Network Backend',
-		url: 'http://bit.ly/social-tc',
-		repo: 'social-network',
-		image: photo4,
-		features:
-			'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
-		type: 'back-end',
-	},
+	// {
+	// 	id: '8',
+	// 	title: 'Book Search',
+	// 	url: 'https://booksearch-tc.herokuapp.com/',
+	// 	repo: 'book-search',
+	// 	image: photo8,
+	// 	features:
+	// 		'Full-Stack MERN App, JavaScript, React, MongoDB, Express.js, Node.js, GraphQL API, Apollo Server, JWT',
+	// 	type: 'full-stack',
+	// },
+	// {
+	// 	id: '4',
+	// 	title: 'Social Network Backend',
+	// 	url: 'http://bit.ly/social-tc',
+	// 	repo: 'social-network',
+	// 	image: photo4,
+	// 	features:
+	// 		'Back-End, JavaScript, Express.js, Node.js, RESTful API, NoSQL Database, MongoDB, Mongoose',
+	// 	type: 'back-end',
+	// },
 	// {
 	//     id: '5',
 	//     title: 'Team Builder',
