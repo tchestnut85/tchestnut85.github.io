@@ -1,13 +1,13 @@
-import React from 'react';
 import Project from '../Project';
+import React from 'react';
 
 function Portfolio() {
-    return (
-        <section className='project-wrap'>
-            <h2 className='heading'>My Projects</h2>
-            <Project></Project>
-        </section>
-    );
+	return (
+		<section className='project-wrap'>
+			<h2 className='heading'>My Projects</h2>
+			<Project />
+		</section>
+	);
 }
 
 export default Portfolio;
