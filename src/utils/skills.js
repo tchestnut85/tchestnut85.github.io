@@ -97,7 +97,7 @@ const skills = [
 	{
 		name: 'Git',
 		file: 'git-icon.svg',
-		type: 'back-end',
+		type: 'other',
 	},
 	{
 		name: 'Webpack',
