@@ -101,7 +101,7 @@ nav li {
 }
 
 .list-hover:hover {
-	font-size: 25px;
+	/* font-size: 25px; */
 	color: paleturquoise;
 	background-color: var(--thirdColor);
 }
