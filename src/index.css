@@ -437,7 +437,7 @@ textarea {
 }
 
 .footer span {
-	padding: 10px 15px;
+	padding: 2% 5%;
 	border-radius: 10%;
 	transition: background-color 0.5s ease-in-out;
 }
@@ -623,7 +623,6 @@ textarea {
 	}
 
 	.footer span {
-		padding: 10px 30px;
 		border-radius: 10%;
 		transition: background-color 0.5s ease-in-out;
 	}
@@ -657,12 +656,5 @@ textarea {
 	.grid-item {
 		width: 300px;
 		height: 415px;
-	}
-}
-
-/* Small Mobile Size */
-@media screen and (max-width: 340px) {
-	.footer span {
-		padding: 10px 20px;
 	}
 }
