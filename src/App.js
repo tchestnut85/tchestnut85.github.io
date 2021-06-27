@@ -1,31 +1,43 @@
 import './index.css';
 
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
 
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Portfolio from './components/Portfolio';
-import React from 'react';
+import Projects from './components/Projects';
 import Resume from './components/Resume';
+import { sections } from './utils/navItems';
 
 function App() {
+	const [currentSection, setCurrentSection] = useState('About');
+
+	const renderPage = () => {
+		switch (currentSection) {
+			case 'Projects':
+				return <Projects />;
+			case 'Contact':
+				return <Contact />;
+			case 'Resume':
+				return <Resume />;
+			default:
+				return <About />;
+		}
+	};
+
 	return (
-		<Router>
-			<div className='app-container'>
-				<div className='content-wrap'>
-					<Header />
-					<Switch>
-						<Route exact path='/' component={About} />
-						<Route exact path='/contact' component={Contact} />
-						<Route exact path='/resume' component={Resume} />
-						<Route exact path='/portfolio' component={Portfolio} />
-					</Switch>
-				</div>
-				<Footer />
+		<div className='app-container'>
+			<div className='content-wrap'>
+				<Header
+					sections={sections}
+					currentSection={currentSection}
+					setCurrentSection={setCurrentSection}
+				/>
+				{renderPage(currentSection)}
 			</div>
-		</Router>
+			<Footer />
+		</div>
 	);
 }
 
