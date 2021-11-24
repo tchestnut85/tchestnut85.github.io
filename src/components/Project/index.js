@@ -1,14 +1,11 @@
 import React from 'react';
-import projects from '../../utils/projects';
+import { PROJECTS } from '../../utils/projects';
 
 function Project() {
 	return (
 		<div className='project-grid'>
-			{projects.map(project => (
-				<div
-					key={project.repo}
-					className={`grid-item project-${project.id}`}
-				>
+			{PROJECTS.map((project, i) => (
+				<div key={i} className={`grid-item project-${i}`}>
 					<h2 className='project-title'>{project.title}</h2>
 					<div className='card-body'>
 						<div>
@@ -19,26 +16,16 @@ function Project() {
 							/>
 						</div>
 						<div>
-							<p className='project-feature'>
-								{project.features}
-							</p>
+							<p className='project-feature'>{project.features}</p>
 						</div>
 					</div>
 					<div className='repo-link-wrap'>
 						{project.type === 'back-end' ? (
-							<a
-								href={project.url}
-								target='_blank'
-								rel='noreferrer'
-							>
+							<a href={project.url} target='_blank' rel='noreferrer'>
 								View Demo
 							</a>
 						) : (
-							<a
-								href={project.url}
-								target='_blank'
-								rel='noreferrer'
-							>
+							<a href={project.url} target='_blank' rel='noreferrer'>
 								Visit App
 							</a>
 						)}

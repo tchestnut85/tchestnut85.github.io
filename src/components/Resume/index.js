@@ -1,9 +1,9 @@
 import React from 'react';
-import skills from '../../utils/skills';
+import { SKILLS } from '../../utils/skills';
 
 function Resume() {
-	const frontends = skills.filter(skill => skill.type === 'front-end');
-	const backends = skills.filter(skill => skill.type === 'back-end');
+	const frontendSkills = SKILLS.filter(skill => skill.type === 'front-end');
+	const backendSkills = SKILLS.filter(skill => skill.type === 'back-end');
 
 	return (
 		<section className='resume-section'>
@@ -23,13 +23,10 @@ function Resume() {
 			</p>
 			<h3 className='heading'>Front-End Skills</h3>
 			<div className='icon-list'>
-				{frontends.map(skill => (
+				{frontendSkills.map(skill => (
 					<div key={skill.name} className='skill-div flex space-b'>
 						<img
-							src={
-								require(`../../assets/skill-icons/${skill.file}`)
-									.default
-							}
+							src={require(`../../assets/skill-icons/${skill.file}`).default}
 							className='skill-icon'
 							alt={`Icon for ${skill.name}`}
 						/>
@@ -39,13 +36,10 @@ function Resume() {
 			</div>
 			<h3 className='heading'>Back-End Skills</h3>
 			<div className='icon-list'>
-				{backends.map(skill => (
+				{backendSkills.map(skill => (
 					<div key={skill.name} className='skill-div flex space-b'>
 						<img
-							src={
-								require(`../../assets/skill-icons/${skill.file}`)
-									.default
-							}
+							src={require(`../../assets/skill-icons/${skill.file}`).default}
 							className='skill-icon'
 							alt={`Icon for ${skill.name}`}
 						/>
