@@ -1,6 +1,6 @@
-const skills = [
+export const SKILLS = [
 	{
-		name: 'Javascript',
+		name: 'JavaScript',
 		file: 'javascript.svg',
 		type: 'front-end',
 	},
@@ -10,12 +10,17 @@ const skills = [
 		type: 'front-end',
 	},
 	{
-		name: 'HTML5',
+		name: 'Redux',
+		file: 'redux.svg',
+		type: 'front-end',
+	},
+	{
+		name: 'HTML',
 		file: 'html-5.svg',
 		type: 'front-end',
 	},
 	{
-		name: 'CSS3',
+		name: 'CSS',
 		file: 'css.svg',
 		type: 'front-end',
 	},
@@ -35,11 +40,6 @@ const skills = [
 		type: 'back-end',
 	},
 	{
-		name: 'Redux',
-		file: 'redux.svg',
-		type: 'front-end',
-	},
-	{
 		name: 'Bootstrap',
 		file: 'bootstrap.svg',
 		type: 'front-end',
@@ -54,11 +54,6 @@ const skills = [
 		file: 'bulma.svg',
 		type: 'front-end',
 	},
-	// {
-	//     name: 'Handlebars',
-	//     file: 'handlebars.svg',
-	//     type: 'front-end'
-	// },
 	{
 		name: 'Jest',
 		file: 'jest.svg',
@@ -77,10 +72,10 @@ const skills = [
 	{
 		name: 'GraphQL',
 		file: 'graphql.svg',
-		type: 'back-end',
+		type: 'front-end',
 	},
 	{
-		name: 'Apollo Server',
+		name: 'GraphQL Apollo Server',
 		file: 'apollo.svg',
 		type: 'back-end',
 	},
@@ -105,5 +100,3 @@ const skills = [
 		type: 'front-end',
 	},
 ];
-
-export default skills;

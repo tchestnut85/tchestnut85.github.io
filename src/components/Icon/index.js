@@ -1,30 +1,7 @@
-import {
-	faGithubSquare,
-	faHackerrank,
-	faLinkedin,
-	faStackOverflow,
-} from '@fortawesome/free-brands-svg-icons';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { faLaptop } from '@fortawesome/free-solid-svg-icons';
 
 function Icon({ links }) {
-	function iconName(id) {
-		switch (id) {
-			case 'link-1':
-				return faLinkedin;
-			case 'link-2':
-				return faGithubSquare;
-			case 'link-3':
-				return faHackerrank;
-			case 'link-4':
-				return faStackOverflow;
-			default:
-				return faLaptop;
-		}
-	}
-
 	return (
 		<div className='flex centered wrap'>
 			{links.map(link => (
@@ -38,7 +15,7 @@ function Icon({ links }) {
 						<FontAwesomeIcon
 							className='icons'
 							key={`${link.icon}-icon`}
-							icon={iconName(link.id)}
+							icon={link.iconName}
 						/>
 					</a>
 				</span>

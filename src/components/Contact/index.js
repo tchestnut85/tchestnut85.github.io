@@ -8,19 +8,6 @@ function Contact() {
 
 	const copyEmail = () => {
 		const email = document.getElementById('email');
-		// const range = document.createRange();
-		// range.selectNodeContents(email);
-		// window.getSelection().addRange(range);
-
-		// try {
-		//     const success = document.execCommand('copy');
-		//     const message = success ? 'Email Copied!' : "Email wasn't copied";
-		//     console.log(message);
-		// } catch (err) {
-		//     console.error('Unable to copy email.', err);
-		// }
-
-		// window.getSelection().removeAllRanges();
 
 		navigator.clipboard
 			.writeText(email.textContent)
@@ -51,24 +38,15 @@ function Contact() {
 						<h3 className='sub-heading'>Email</h3>
 						<p>Contact me at:</p>
 						<div className='email'>
-							<a
-								id='email'
-								href='mailto:thomaschestnut00@gmail.com'
-							>
+							<a id='email' href='mailto:thomaschestnut00@gmail.com'>
 								thomaschestnut00@gmail.com
 							</a>
 							<button className='email-btn'>
-								<FontAwesomeIcon
-									onClick={copyEmail}
-									icon={faCopy}
-								/>
+								<FontAwesomeIcon onClick={copyEmail} icon={faCopy} />
 							</button>
 						</div>
 						{emailCopied && (
-							<span
-								style={{ marginTop: '10px' }}
-								className='email-message'
-							>
+							<span style={{ marginTop: '10px' }} className='email-message'>
 								{emailCopied}
 							</span>
 						)}
