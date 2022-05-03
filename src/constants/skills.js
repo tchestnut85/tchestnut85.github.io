@@ -24,11 +24,11 @@ export const SKILLS = [
 		file: 'css.svg',
 		type: 'front-end',
 	},
-	{
-		name: 'jQuery',
-		file: 'jquery.svg',
-		type: 'front-end',
-	},
+	// {
+	// 	name: 'jQuery',
+	// 	file: 'jquery.svg',
+	// 	type: 'front-end',
+	// },
 	{
 		name: 'Node.js',
 		file: 'nodejs.svg',
@@ -57,7 +57,7 @@ export const SKILLS = [
 	{
 		name: 'Jest',
 		file: 'jest.svg',
-		type: 'front-end',
+		type: 'other',
 	},
 	{
 		name: 'MongoDB',
@@ -70,12 +70,12 @@ export const SKILLS = [
 		type: 'back-end',
 	},
 	{
-		name: 'GraphQL',
+		name: 'GraphQL | ApolloClient',
 		file: 'graphql.svg',
 		type: 'front-end',
 	},
 	{
-		name: 'GraphQL Apollo Server',
+		name: 'GraphQL | ApolloServer',
 		file: 'apollo.svg',
 		type: 'back-end',
 	},
@@ -94,9 +94,14 @@ export const SKILLS = [
 		file: 'git-icon.svg',
 		type: 'other',
 	},
+	// {
+	// 	name: 'Webpack',
+	// 	file: 'webpack.svg',
+	// 	type: 'front-end',
+	// },
 	{
-		name: 'Webpack',
-		file: 'webpack.svg',
-		type: 'front-end',
+		name: 'Heroku',
+		file: '',
+		type: 'other',
 	},
 ];
