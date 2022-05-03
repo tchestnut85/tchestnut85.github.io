@@ -24,6 +24,16 @@ export const SKILLS = [
 		file: 'css.svg',
 		type: 'front-end',
 	},
+	{
+		name: 'Sass',
+		file: 'sass.svg',
+		type: 'front-end',
+	},
+	{
+		name: 'CSSmodules',
+		file: 'cssmodules.svg',
+		type: 'front-end',
+	},
 	// {
 	// 	name: 'jQuery',
 	// 	file: 'jquery.svg',
@@ -70,12 +80,12 @@ export const SKILLS = [
 		type: 'back-end',
 	},
 	{
-		name: 'GraphQL | ApolloClient',
+		name: 'GraphQL | Apollo Client',
 		file: 'graphql.svg',
 		type: 'front-end',
 	},
 	{
-		name: 'GraphQL | ApolloServer',
+		name: 'GraphQL | Apollo Server',
 		file: 'apollo.svg',
 		type: 'back-end',
 	},
@@ -101,7 +111,7 @@ export const SKILLS = [
 	// },
 	{
 		name: 'Heroku',
-		file: '',
+		file: 'heroku.svg',
 		type: 'other',
 	},
 ];
