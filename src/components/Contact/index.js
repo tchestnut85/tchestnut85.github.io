@@ -11,25 +11,16 @@ import { SOCIAL_URLS } from '../../constants/socialUrls';
 function Contact() {
 	const [emailCopied, setEmailCopied] = useState(false);
 
-	const copyEmail = () => {
-		const email = document.getElementById('email');
-
-		navigator.clipboard
-			.writeText(email.textContent)
-			.then(() => {
-				const message = CONTACT_TEXT.email.success;
-				console.log(message);
-			})
-			.catch(error => {
-				console.log(CONTACT_TEXT.email.error, error);
-			});
-
-		if (email) {
+	const copyEmail = async () => {
+		try {
+			await navigator.clipboard.writeText(EMAIL);
 			setEmailCopied(true);
+
 			setTimeout(() => {
 				setEmailCopied(false);
 			}, 3000);
-		} else {
+		} catch (err) {
+			console.error(err);
 			setEmailCopied(false);
 		}
 	};
@@ -54,7 +45,6 @@ function Contact() {
 				<div>
 					<div className="content email-section">
 						<h3 className="sub-heading">{CONTACT_TEXT.email.heading}</h3>
-						<p>{CONTACT_TEXT.email.contact}</p>
 						<div className="email">
 							<a id="email" href={`mailto:${EMAIL}`}>
 								{EMAIL}
@@ -65,7 +55,7 @@ function Contact() {
 						</div>
 						{emailCopied && (
 							<span style={{ marginTop: '10px' }} className="email-message">
-								{emailCopied}
+								{CONTACT_TEXT.email.success}
 							</span>
 						)}
 					</div>
