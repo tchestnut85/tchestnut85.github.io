@@ -458,9 +458,13 @@ textarea {
 	bottom: 0;
 }
 
+.footer > div {
+	gap: 1rem;
+}
+
 .footer span {
 	padding: 10px 5%;
-	border-radius: 10%;
+	border-radius: 5px;
 	transition: background-color 0.5s ease-in-out;
 }
 
@@ -678,5 +682,9 @@ textarea {
 	.grid-item {
 		width: 300px;
 		height: 415px;
+	}
+
+	.footer > div {
+		gap: 0;
 	}
 }
