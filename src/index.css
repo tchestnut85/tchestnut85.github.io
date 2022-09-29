@@ -117,6 +117,9 @@ nav li {
 }
 
 .bio {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5vh;
 	text-align: left;
 	background-color: var(--secondColor);
 	max-width: 50%;
@@ -132,6 +135,11 @@ nav li {
 	min-width: 250px;
 	margin: 0 5%;
 	border-radius: 5px;
+}
+
+.bio-container > .pic-placeholder {
+	height: 50px;
+	width: 50px;
 }
 
 /* PROJECTS SECTION */
