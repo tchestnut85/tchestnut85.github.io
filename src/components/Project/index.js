@@ -2,7 +2,11 @@ import React from 'react';
 
 import Link from '../Link';
 
-import { PROJECTS } from '../../constants/projects';
+import {
+	GITHUB_BASE_URL,
+	PROJECTS,
+	PROJECT_TEXT,
+} from '../../constants/projects';
 
 function Project() {
 	return (
@@ -24,12 +28,16 @@ function Project() {
 					</div>
 					<div className="repo-link-wrap">
 						<Link
-							label={project.type === 'back-end' ? 'View Demo' : 'Visit App'}
+							label={
+								project.type === 'back-end'
+									? PROJECT_TEXT.visitLabel.backEnd
+									: PROJECT_TEXT.visitLabel.frontEnd
+							}
 							url={project.url}
 						/>
 						<Link
-							label="GitHub Repo"
-							url={`https://github.com/tchestnut85/${project.repo}`}
+							label={PROJECT_TEXT.githubLabel}
+							url={`${GITHUB_BASE_URL}${project.repo}`}
 							className="project-repo"
 						/>
 					</div>
