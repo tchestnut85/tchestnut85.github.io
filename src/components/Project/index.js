@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Link from '../Link';
+
 import { PROJECTS } from '../../constants/projects';
 
 function Project() {
@@ -20,23 +23,15 @@ function Project() {
 						</div>
 					</div>
 					<div className="repo-link-wrap">
-						{project.type === 'back-end' ? (
-							<a href={project.url} target="_blank" rel="noreferrer">
-								View Demo
-							</a>
-						) : (
-							<a href={project.url} target="_blank" rel="noreferrer">
-								Visit App
-							</a>
-						)}
-						<a
-							href={`https://github.com/tchestnut85/${project.repo}`}
-							target="_blank"
-							rel="noreferrer"
+						<Link
+							label={project.type === 'back-end' ? 'View Demo' : 'Visit App'}
+							url={project.url}
+						/>
+						<Link
+							label="GitHub Repo"
+							url={`https://github.com/tchestnut85/${project.repo}`}
 							className="project-repo"
-						>
-							GitHub Repo
-						</a>
+						/>
 					</div>
 				</div>
 			))}

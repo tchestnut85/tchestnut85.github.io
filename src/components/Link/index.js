@@ -1,6 +1,6 @@
-const Link = ({ label, url, className }) => (
+const Link = ({ label, url, className, children }) => (
 	<a href={url} rel="noopener noreferrer" target="_blank" className={className}>
-		{label}
+		{label || children}
 	</a>
 );
 

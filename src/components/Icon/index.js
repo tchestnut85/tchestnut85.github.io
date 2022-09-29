@@ -1,23 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
+import Link from '../Link';
+
 function Icon({ links }) {
 	return (
-		<div className='flex centered wrap'>
+		<div className="flex centered wrap">
 			{links.map(link => (
 				<span key={`${link.icon}-span`}>
-					<a
-						href={link.url}
-						target='_blank'
-						rel='noreferrer'
-						className='icon-link link'
-					>
+					<Link url={link.url} className="icon-link link">
 						<FontAwesomeIcon
-							className='icons'
+							className="icons"
 							key={`${link.icon}-icon`}
 							icon={link.iconName}
 						/>
-					</a>
+					</Link>
 				</span>
 			))}
 		</div>

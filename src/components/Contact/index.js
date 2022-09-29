@@ -7,8 +7,7 @@ import Link from '../Link';
 
 import { EMAIL, CONTACT_TEXT } from '../../constants/contact';
 import { SOCIAL_URLS } from '../../constants/socialUrls';
-console.log('SOCIAL_URLS:', SOCIAL_URLS);
-console.log(Object.keys(SOCIAL_URLS));
+
 function Contact() {
 	const [emailCopied, setEmailCopied] = useState(false);
 
