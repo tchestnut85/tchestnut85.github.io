@@ -1,10 +1,10 @@
 import Icon from '../Icon';
 import React from 'react';
-import { LINKS } from '../../utils/footerLinks';
+import { LINKS } from '../../constants/footerLinks';
 
 function Footer() {
 	return (
-		<footer className='footer'>
+		<footer className="footer">
 			<Icon links={LINKS}></Icon>
 		</footer>
 	);

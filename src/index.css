@@ -117,6 +117,9 @@ nav li {
 }
 
 .bio {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5vh;
 	text-align: left;
 	background-color: var(--secondColor);
 	max-width: 50%;
@@ -132,6 +135,11 @@ nav li {
 	min-width: 250px;
 	margin: 0 5%;
 	border-radius: 5px;
+}
+
+.bio-container > .pic-placeholder {
+	height: 50px;
+	width: 50px;
 }
 
 /* PROJECTS SECTION */
@@ -231,35 +239,49 @@ nav li {
 }
 
 .email-section,
-.linkedin-section {
+.social-section {
 	display: flex;
 	flex-direction: column;
-	text-align: center;
+	align-items: center;
 	margin: 5px 300px 25px 300px;
 }
 
+.social-links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	width: 100%;
+}
+
 .email,
-.linkedin {
+.social-link {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	align-items: center;
 	font-size: 15px;
 	margin: 0 15% 0 15%;
+	padding: 0 5%;
 	font-weight: bolder;
 	background-color: var(--thirdColor);
 	border-radius: 5px;
 	transition: background-color 0.25s ease-in-out;
 }
 
+.social-link {
+	margin: 0;
+	padding: 0 2%;
+}
+
 .email a,
-.linkedin {
+.social-link {
 	color: var(--secondColor);
 	transition: color 0.25s ease-in-out;
 }
 
 .email:hover,
-.linkedin:hover {
+.social-link:hover {
 	color: whitesmoke;
 }
 
@@ -268,7 +290,7 @@ nav li {
 }
 
 .email:hover,
-.linkedin:hover {
+.social-link:hover {
 	background-color: var(--primaryColor);
 }
 
@@ -436,9 +458,13 @@ textarea {
 	bottom: 0;
 }
 
+.footer > div {
+	gap: 1rem;
+}
+
 .footer span {
 	padding: 10px 5%;
-	border-radius: 10%;
+	border-radius: 5px;
 	transition: background-color 0.5s ease-in-out;
 }
 
@@ -507,7 +533,7 @@ textarea {
 
 @media screen and (max-width: 1300px) {
 	.email-section,
-	.linkedin-section {
+	.social-section {
 		margin: 5px 100px 15px 100px;
 	}
 }
@@ -555,7 +581,7 @@ textarea {
 	}
 
 	.email,
-	.linkedin {
+	.social-link {
 		margin: 0 5% 0 5%;
 	}
 }
@@ -608,12 +634,12 @@ textarea {
 	}
 
 	.email-section,
-	.linkedin-section {
+	.social-section {
 		margin: 5px 10px 15px 10px;
 	}
 
 	.email,
-	.linkedin {
+	.social-link {
 		flex-direction: column;
 		margin: 0 2% 0 2%;
 	}
@@ -656,5 +682,9 @@ textarea {
 	.grid-item {
 		width: 300px;
 		height: 415px;
+	}
+
+	.footer > div {
+		gap: 0;
 	}
 }

@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faUserCircle } from '@fortawesome/free-regular-svg-icons';
+
+import { ABOUT_TEXT, GITHUB_ENDPOINT } from '../../constants/about';
+
+const { BIO, HEADING, IMAGE } = ABOUT_TEXT;
 
 function About() {
-	const githubEndpoint = 'https://api.github.com/users/tchestnut85';
 	const [githubData, setGithubData] = useState('');
 
 	useEffect(() => {
@@ -10,7 +15,7 @@ function About() {
 
 	const getGithubData = async () => {
 		try {
-			const res = await fetch(githubEndpoint);
+			const res = await fetch(GITHUB_ENDPOINT);
 			const data = await res.json();
 			setGithubData(data);
 		} catch (err) {
@@ -20,34 +25,19 @@ function About() {
 
 	return (
 		<section>
-			<h2 className='heading'>Hello! I'm Tom.</h2>
-			<h3 className='sub-heading'>Full Stack JavaScript Developer</h3>
-			<div className='bio-container'>
-				<img
-					className='my-pic'
-					src={githubData.avatar_url}
-					alt='Tom Chestnut holding his pug Frodo in front of a stream.'
-				/>
+			<h2 className="heading">{HEADING.h2}</h2>
+			<h3 className="sub-heading">{HEADING.h3}</h3>
+			<div className="bio-container">
+				{!githubData?.avatar_url ? (
+					<FontAwesomeIcon className="pic-placeholder" icon={faUserCircle} />
+				) : (
+					<img className="my-pic" src={githubData.avatar_url} alt={IMAGE.alt} />
+				)}
 
-				<article className='bio'>
-					I'm a Full Stack JavaScript Developer specializing in the
-					MERN stack and skilled in creating responsive web
-					applications. I've earned a Full Stack Development
-					Certificate from University of Pennsylvania LPS Coding
-					Bootcamp.
-					<br />
-					I have created multiple projects using front-end technology
-					such as JavaScript, React, HTML, and CSS as well as back-end
-					tools like Node.js, Express.js, MongoDB, GraphQL and MySQL
-					while following to development methods such as Agile
-					development, RESTful APIs, MVC structure and Single Page
-					Applications (SPAs).
-					<br />
-					When I'm not coding, I spend time going for hikes with my
-					wife and our pug, or I may be playing video games like
-					Skyrim, Legend of Zelda, or Assasin's Creed. I also enjoy
-					traveling when able to, having visited Japan and Italy in
-					the past and hope to see more countries in the future.
+				<article className="bio">
+					{Object.keys(BIO).map(key => (
+						<p key={key}>{BIO[key]}</p>
+					))}
 				</article>
 			</div>
 		</section>

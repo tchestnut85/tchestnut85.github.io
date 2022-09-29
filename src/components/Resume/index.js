@@ -1,52 +1,69 @@
 import React from 'react';
-import { SKILLS } from '../../utils/skills';
+
+import {
+	SKILLS,
+	SKILL_TYPES,
+	RESUME_TEXT,
+	RESUME_URL,
+} from '../../constants/skills';
+
+const SKILL_TYPE_KEYS = Object.keys(SKILL_TYPES);
+
+const skills = SKILL_TYPE_KEYS.reduce((acc, key) => {
+	const skillId = SKILL_TYPES[key].id;
+	const newSkillObj = {
+		heading: SKILL_TYPES[key].label,
+		list: SKILLS.filter(skill => skill.type === skillId),
+	};
+	return [...acc, newSkillObj];
+}, []);
+
+const ResumeSection = ({ skills }) => {
+	return (
+		<>
+			{skills.map(skills => (
+				<div key={skills.name} className="skill-div flex space-b">
+					<img
+						src={require(`../../assets/skill-icons/${skills.file}`).default}
+						alt={`Icon for ${skills.name}`}
+						className="skill-icon"
+					/>
+					<span className="skill-text">{skills.name}</span>
+				</div>
+			))}
+		</>
+	);
+};
 
 function Resume() {
-	const frontendSkills = SKILLS.filter(skill => skill.type === 'front-end');
-	const backendSkills = SKILLS.filter(skill => skill.type === 'back-end');
+	const renderSkillSections = () => {
+		return skills.map(({ heading, list }) => (
+			<div key={heading}>
+				<h3 className="heading">{heading}</h3>
+				<div className="icon-list">
+					<ResumeSection skills={list} />
+				</div>
+			</div>
+		));
+	};
 
 	return (
-		<section className='resume-section'>
+		<section className="resume-section">
 			<div>
-				<h2 className='heading'>Resume</h2>
+				<h2 className="heading">Resume</h2>
 			</div>
-			<p className='content resume-text'>
-				View or download my full resume
+			<p className="content resume-text">
+				{RESUME_TEXT.text}
 				<a
-					className='resume-link'
-					href='https://drive.google.com/file/d/1M4PNYrAi1U5XrBmbfFSP-DXe4pLXNSMs/view?usp=sharing'
-					target='_blank'
-					rel='noopener noreferrer'
+					className="resume-link"
+					href={RESUME_URL}
+					target="_blank"
+					rel="noopener noreferrer"
 				>
-					here.
+					{RESUME_TEXT.here}
 				</a>
 			</p>
-			<h3 className='heading'>Front-End Skills</h3>
-			<div className='icon-list'>
-				{frontendSkills.map(skill => (
-					<div key={skill.name} className='skill-div flex space-b'>
-						<img
-							src={require(`../../assets/skill-icons/${skill.file}`).default}
-							className='skill-icon'
-							alt={`Icon for ${skill.name}`}
-						/>
-						<span className='skill-text'>{skill.name}</span>
-					</div>
-				))}
-			</div>
-			<h3 className='heading'>Back-End Skills</h3>
-			<div className='icon-list'>
-				{backendSkills.map(skill => (
-					<div key={skill.name} className='skill-div flex space-b'>
-						<img
-							src={require(`../../assets/skill-icons/${skill.file}`).default}
-							className='skill-icon'
-							alt={`Icon for ${skill.name}`}
-						/>
-						<span className='skill-text'>{skill.name}</span>
-					</div>
-				))}
-			</div>
+			{renderSkillSections()}
 		</section>
 	);
 }

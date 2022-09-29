@@ -1,42 +1,45 @@
 import React from 'react';
-import { PROJECTS } from '../../utils/projects';
+
+import Link from '../Link';
+
+import {
+	GITHUB_BASE_URL,
+	PROJECTS,
+	PROJECT_TEXT,
+} from '../../constants/projects';
 
 function Project() {
 	return (
-		<div className='project-grid'>
+		<div className="project-grid">
 			{PROJECTS.map((project, i) => (
 				<div key={i} className={`grid-item project-${i}`}>
-					<h2 className='project-title'>{project.title}</h2>
-					<div className='card-body'>
+					<h2 className="project-title">{project.title}</h2>
+					<div className="card-body">
 						<div>
 							<img
 								src={project.image}
 								alt={`Screenshot of ${project.title} App`}
-								className='project-img'
+								className="project-img"
 							/>
 						</div>
 						<div>
-							<p className='project-feature'>{project.features}</p>
+							<p className="project-feature">{project.features}</p>
 						</div>
 					</div>
-					<div className='repo-link-wrap'>
-						{project.type === 'back-end' ? (
-							<a href={project.url} target='_blank' rel='noreferrer'>
-								View Demo
-							</a>
-						) : (
-							<a href={project.url} target='_blank' rel='noreferrer'>
-								Visit App
-							</a>
-						)}
-						<a
-							href={`https://github.com/tchestnut85/${project.repo}`}
-							target='_blank'
-							rel='noreferrer'
-							className='project-repo'
-						>
-							GitHub Repo
-						</a>
+					<div className="repo-link-wrap">
+						<Link
+							label={
+								project.type === 'back-end'
+									? PROJECT_TEXT.visitLabel.backEnd
+									: PROJECT_TEXT.visitLabel.frontEnd
+							}
+							url={project.url}
+						/>
+						<Link
+							label={PROJECT_TEXT.githubLabel}
+							url={`${GITHUB_BASE_URL}${project.repo}`}
+							className="project-repo"
+						/>
 					</div>
 				</div>
 			))}
