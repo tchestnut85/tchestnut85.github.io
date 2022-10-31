@@ -12,3 +12,5 @@ export const SECTIONS = [
 		name: 'Resume',
 	},
 ];
+
+export const NAME = 'Tom Chestnut';

@@ -1,11 +1,14 @@
-import NavItem from '../NavItem';
 import React from 'react';
+
+import NavItem from '../NavItem';
+
+import { NAME } from '../../constants/navItems';
 
 function Nav({ sections, currentSection, setCurrentSection }) {
 	return (
-		<nav className='navbar'>
-			<h1 className='my-name'>Tom Chestnut</h1>
-			<ul className='flex space-a'>
+		<nav className="navbar">
+			<h1 className="my-name">{NAME}</h1>
+			<ul className="flex space-a nav-items">
 				{sections.map(section => (
 					<NavItem
 						key={section.name}

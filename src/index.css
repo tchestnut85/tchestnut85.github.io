@@ -1,16 +1,11 @@
 /* GENERAL STYLES */
 
 :root {
-	/* --primaryColor: #52796f; */
 	--primaryColor: teal;
 	--secondColor: #354f52;
 	--thirdColor: #74c69d;
 	--fontColor: whitesmoke;
 	--fontSecond: #2f3e46;
-	/* --primaryColor: teal; */
-	/* --secondColor: rgb(6, 95, 107); */
-	/* --thirdColor: rgb(143, 69, 143);  */
-	/* --fontColor: whitesmoke; */
 }
 
 * {
@@ -70,6 +65,10 @@ nav li {
 	position: fixed;
 	width: 100%;
 	top: 0;
+}
+
+.nav-items {
+	gap: 5px;
 }
 
 .my-name {
@@ -450,9 +449,8 @@ textarea {
 /* FOOTER */
 
 .footer {
-	background-color: var(--thirdColor);
+	background-color: var(--secondColor);
 	width: 100%;
-	/* height: 10rem; */
 	padding: 15px 15px;
 	position: absolute;
 	bottom: 0;
@@ -471,19 +469,13 @@ textarea {
 .icon-link,
 .icon-link:visited {
 	text-decoration: none;
-	color: var(--fontSecond);
+	color: var(--thirdColor);
 	font-size: 50px;
-	/* transition: font-size .5s ease-in-out, color .5s ease-in-out, background-color .5s ease-in-out; */
 	transition: background-color 0.5s ease-in-out;
 }
 
-.footer span:hover {
-	background-color: var(--secondColor);
-}
-
 .icon-link:hover {
-	/* font-size: 65px; */
-	color: paleturquoise;
+	color: var(--primaryColor);
 }
 
 /* UTILITY CLASSES */
@@ -677,6 +669,7 @@ textarea {
 	.navbar h1,
 	.navbar ul li span {
 		font-size: 70%;
+		/* font-size: 60%; */
 	}
 
 	.grid-item {
