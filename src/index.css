@@ -462,8 +462,6 @@ textarea {
 
 .footer span {
 	padding: 10px 5%;
-	border-radius: 5px;
-	transition: background-color 0.5s ease-in-out;
 }
 
 .icon-link,
@@ -471,11 +469,16 @@ textarea {
 	text-decoration: none;
 	color: var(--thirdColor);
 	font-size: 50px;
-	transition: background-color 0.5s ease-in-out;
 }
 
-.icon-link:hover {
+.icon-link > svg:hover {
 	color: var(--primaryColor);
+	transition: color 0.25s ease-in;
+}
+
+.icon-link > svg {
+	color: var(--thirdColor);
+	transition: color 0.25s ease;
 }
 
 /* UTILITY CLASSES */
@@ -638,11 +641,6 @@ textarea {
 
 	.email-btn {
 		margin-bottom: 5px;
-	}
-
-	.footer span {
-		border-radius: 10%;
-		transition: background-color 0.5s ease-in-out;
 	}
 
 	.icon-link,
