@@ -5,7 +5,7 @@ import { LINKS } from '../../constants/footerLinks';
 function Footer() {
 	return (
 		<footer className="footer">
-			<Icon links={LINKS}></Icon>
+			<Icon links={LINKS} />
 		</footer>
 	);
 }
