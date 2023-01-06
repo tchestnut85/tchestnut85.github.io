@@ -1,5 +1,5 @@
 import photo1 from '../assets/images/pass-the-page.png';
-import photo2 from '../assets/images/deep-thoughts.png';
+import photo2 from '../assets/images/nhl-dashboard.png';
 import photo3 from '../assets/images/AniGame.png';
 import photo4 from '../assets/images/match-game.png';
 import photo5 from '../assets/images/lite-speed.png';
@@ -43,17 +43,16 @@ export const PROJECTS = [
 		type: 'full-stack',
 	},
 	{
-		title: 'Pass the Page',
-		url: 'https://passthepage.herokuapp.com/',
-		repo: 'pass-the-page',
-		image: photo1,
-		features:
-			'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
-		type: 'full-stack',
+		title: 'NHL Dashboard',
+		url: 'https://nhl-dashboard-one.vercel.app/',
+		repo: 'nhl-dashboard',
+		image: photo2,
+		features: 'JavaScript, Next.js, React, Redux, Axios, Chakra UI',
+		type: 'front-end',
 	},
 	{
 		title: 'ToDo App',
-		url: 'https://todoapp-tc.herokuapp.com/',
+		url: 'https://todoapp-tc.onrender.com/',
 		repo: 'to-do-app',
 		image: photo6,
 		features:
@@ -61,12 +60,12 @@ export const PROJECTS = [
 		type: 'full-stack',
 	},
 	{
-		title: 'Deep Thoughts',
-		url: 'https://deepthoughts-tc.herokuapp.com/',
-		repo: 'deep-thoughts',
-		image: photo2,
+		title: 'Pass the Page',
+		url: 'https://passthepage.herokuapp.com/',
+		repo: 'pass-the-page',
+		image: photo1,
 		features:
-			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
+			'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
 		type: 'full-stack',
 	},
 ];
