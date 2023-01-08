@@ -1,9 +1,11 @@
 import photo1 from '../assets/images/pass-the-page.png';
-import photo2 from '../assets/images/deep-thoughts.png';
+import photo2 from '../assets/images/nhl-dashboard.png';
 import photo3 from '../assets/images/AniGame.png';
 import photo4 from '../assets/images/match-game.png';
 import photo5 from '../assets/images/lite-speed.png';
 import photo6 from '../assets/images/todo-app.png';
+import photo7 from '../assets/images/team-builder.png';
+// import photo8 from '../assets/images/employee-tracker.png';
 
 export const GITHUB_BASE_URL = 'https://github.com/tchestnut85/';
 
@@ -34,6 +36,23 @@ export const PROJECTS = [
 		type: 'front-end',
 	},
 	{
+		title: 'NHL Dashboard',
+		url: 'https://nhl-dashboard-one.vercel.app/',
+		repo: 'nhl-dashboard',
+		image: photo2,
+		features: 'JavaScript, Next.js, React, Redux, Axios, Chakra UI',
+		type: 'front-end',
+	},
+	{
+		title: 'ToDo App',
+		url: 'https://todoapp-tc.onrender.com/',
+		repo: 'to-do-app',
+		image: photo6,
+		features:
+			'Full-Stack MERN App, JavaScript, React, React Context, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
+		type: 'full-stack',
+	},
+	{
 		title: 'Lite Speed',
 		url: 'https://lite-speed.herokuapp.com/',
 		repo: 'lite-speed',
@@ -52,21 +71,20 @@ export const PROJECTS = [
 		type: 'full-stack',
 	},
 	{
-		title: 'ToDo App',
-		url: 'https://todoapp-tc.herokuapp.com/',
-		repo: 'to-do-app',
-		image: photo6,
+		title: 'Team Builder',
+		url: 'http://bit.ly/teambuilder-tc',
+		repo: 'team-builder',
+		image: photo7,
 		features:
-			'Full-Stack MERN App, JavaScript, React, React Context, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
-		type: 'full-stack',
+			'Command-line Team Profile Generator, JavaScript, Node.js, OOP, Inquirer.js, Jest, TDD, Materialize CSS',
+		type: 'back-end',
 	},
-	{
-		title: 'Deep Thoughts',
-		url: 'https://deepthoughts-tc.herokuapp.com/',
-		repo: 'deep-thoughts',
-		image: photo2,
-		features:
-			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
-		type: 'full-stack',
-	},
+	// {
+	// 	title: 'Employee Tracker',
+	// 	url: 'http://bit.ly/emptracker-tc',
+	// 	repo: 'employee-tracker',
+	// 	image: photo8,
+	// 	features: 'Command-line Employee Tracker, JavaScript, Node.js, SQL, MySQL, Inquirer.js',
+	// 	type: 'back-end',
+	// },
 ];
