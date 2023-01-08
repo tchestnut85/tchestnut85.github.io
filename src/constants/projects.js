@@ -4,6 +4,8 @@ import photo3 from '../assets/images/AniGame.png';
 import photo4 from '../assets/images/match-game.png';
 import photo5 from '../assets/images/lite-speed.png';
 import photo6 from '../assets/images/todo-app.png';
+import photo7 from '../assets/images/team-builder.png';
+// import photo8 from '../assets/images/employee-tracker.png';
 
 export const GITHUB_BASE_URL = 'https://github.com/tchestnut85/';
 
@@ -34,15 +36,6 @@ export const PROJECTS = [
 		type: 'front-end',
 	},
 	{
-		title: 'Lite Speed',
-		url: 'https://lite-speed.herokuapp.com/',
-		repo: 'lite-speed',
-		image: photo5,
-		features:
-			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
-		type: 'full-stack',
-	},
-	{
 		title: 'NHL Dashboard',
 		url: 'https://nhl-dashboard-one.vercel.app/',
 		repo: 'nhl-dashboard',
@@ -60,6 +53,15 @@ export const PROJECTS = [
 		type: 'full-stack',
 	},
 	{
+		title: 'Lite Speed',
+		url: 'https://lite-speed.herokuapp.com/',
+		repo: 'lite-speed',
+		image: photo5,
+		features:
+			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
+		type: 'full-stack',
+	},
+	{
 		title: 'Pass the Page',
 		url: 'https://passthepage.herokuapp.com/',
 		repo: 'pass-the-page',
@@ -68,4 +70,21 @@ export const PROJECTS = [
 			'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
 		type: 'full-stack',
 	},
+	{
+		title: 'Team Builder',
+		url: 'http://bit.ly/teambuilder-tc',
+		repo: 'team-builder',
+		image: photo7,
+		features:
+			'Command-line Team Profile Generator, JavaScript, Node.js, OOP, Inquirer.js, Jest, TDD, Materialize CSS',
+		type: 'back-end',
+	},
+	// {
+	// 	title: 'Employee Tracker',
+	// 	url: 'http://bit.ly/emptracker-tc',
+	// 	repo: 'employee-tracker',
+	// 	image: photo8,
+	// 	features: 'Command-line Employee Tracker, JavaScript, Node.js, SQL, MySQL, Inquirer.js',
+	// 	type: 'back-end',
+	// },
 ];
