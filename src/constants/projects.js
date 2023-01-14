@@ -1,4 +1,4 @@
-import photo1 from '../assets/images/pass-the-page.png';
+// import photo1 from '../assets/images/pass-the-page.png';
 import photo2 from '../assets/images/nhl-dashboard.png';
 import photo3 from '../assets/images/AniGame.png';
 import photo4 from '../assets/images/match-game.png';
@@ -40,7 +40,7 @@ export const PROJECTS = [
 		url: 'https://nhl-dashboard-one.vercel.app/',
 		repo: 'nhl-dashboard',
 		image: photo2,
-		features: 'JavaScript, Next.js, React, Redux, Axios, Chakra UI',
+		features: 'JavaScript, Next.js, React, Redux, Axios, Chakra-UI',
 		type: 'front-end',
 	},
 	{
@@ -49,27 +49,28 @@ export const PROJECTS = [
 		repo: 'to-do-app',
 		image: photo6,
 		features:
-			'Full-Stack MERN App, JavaScript, React, React Context, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
+			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
 		type: 'full-stack',
 	},
 	{
 		title: 'Lite Speed',
-		url: 'https://lite-speed.herokuapp.com/',
+		url: 'https://lite-speed.onrender.com/',
 		repo: 'lite-speed',
 		image: photo5,
 		features:
 			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
 		type: 'full-stack',
 	},
-	{
-		title: 'Pass the Page',
-		url: 'https://passthepage.herokuapp.com/',
-		repo: 'pass-the-page',
-		image: photo1,
-		features:
-			'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
-		type: 'full-stack',
-	},
+	// TODO - enable once Pass the Page is re-deployed
+	// {
+	// 	title: 'Pass the Page',
+	// 	url: 'https://passthepage.herokuapp.com/',
+	// 	repo: 'pass-the-page',
+	// 	image: photo1,
+	// 	features:
+	// 		'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
+	// 	type: 'full-stack',
+	// },
 	{
 		title: 'Team Builder',
 		url: 'http://bit.ly/teambuilder-tc',
@@ -79,6 +80,7 @@ export const PROJECTS = [
 			'Command-line Team Profile Generator, JavaScript, Node.js, OOP, Inquirer.js, Jest, TDD, Materialize CSS',
 		type: 'back-end',
 	},
+	// TODO - enable Employee Tracker after refactoring it
 	// {
 	// 	title: 'Employee Tracker',
 	// 	url: 'http://bit.ly/emptracker-tc',
