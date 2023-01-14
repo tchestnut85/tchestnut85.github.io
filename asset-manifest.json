@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.39d5deef.css",
-    "main.js": "/static/js/main.e1b20566.js",
+    "main.js": "/static/js/main.727f5974.js",
     "static/media/nhl-dashboard.png": "/static/media/nhl-dashboard.c67ee3b620abf26c9954.png",
     "static/media/lite-speed.png": "/static/media/lite-speed.771c1a4debb643edf9ae.png",
     "static/media/match-game.png": "/static/media/match-game.fa2a70040b88c5e2046e.png",
     "static/media/todo-app.png": "/static/media/todo-app.41518fc2a88874650484.png",
-    "static/media/pass-the-page.png": "/static/media/pass-the-page.d0ca14303ef8118c2952.png",
     "static/media/AniGame.png": "/static/media/AniGame.5fc95ccf4de094acefa5.png",
     "static/media/team-builder.png": "/static/media/team-builder.23ba1aa8a25f4c7718bb.png",
     "static/media/sqlite.svg": "/static/media/sqlite.daf4a3a8609a0a94b3da.svg",
@@ -36,10 +35,10 @@
     "static/media/heroku.svg": "/static/media/heroku.9dee12cefa8a114bda7e.svg",
     "static/media/bulma.svg": "/static/media/bulma.ecefb4da633f2f1f370e.svg",
     "main.39d5deef.css.map": "/static/css/main.39d5deef.css.map",
-    "main.e1b20566.js.map": "/static/js/main.e1b20566.js.map"
+    "main.727f5974.js.map": "/static/js/main.727f5974.js.map"
   },
   "entrypoints": [
     "static/css/main.39d5deef.css",
-    "static/js/main.e1b20566.js"
+    "static/js/main.727f5974.js"
   ]
 }
