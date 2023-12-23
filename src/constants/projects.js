@@ -20,19 +20,10 @@ export const PROJECT_TEXT = {
 export const PROJECTS = [
 	{
 		title: 'Match Game',
-		url: 'https://tomchestnut.dev/match-game/',
+		url: 'https://match-game-vadc.vercel.app/',
 		repo: 'match-game',
 		image: photo4,
-		features: 'React, JavaScript, Axios, Sass, CSS Modules, Unsplash API',
-		type: 'front-end',
-	},
-	{
-		title: 'AniGame',
-		url: 'https://tomchestnut.dev/anigame-react/',
-		repo: 'anigame-react',
-		image: photo3,
-		features:
-			'React, JavaScript, Redux, Axios, Sass, CSS Modules, Bulma Library, GameSpot API, Kitsu API',
+		features: 'React, TypeScript, Axios, Sass, CSS Modules, Unsplash API',
 		type: 'front-end',
 	},
 	{
@@ -48,9 +39,16 @@ export const PROJECTS = [
 		url: 'https://todoapp-tc.onrender.com/',
 		repo: 'to-do-app',
 		image: photo6,
-		features:
-			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
+		features: 'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, RESTful API, JWT/bcrypt for Auth',
 		type: 'full-stack',
+	},
+	{
+		title: 'AniGame',
+		url: 'https://tomchestnut.dev/anigame-react/',
+		repo: 'anigame-react',
+		image: photo3,
+		features: 'React, JavaScript, Redux, Axios, Sass, CSS Modules, Bulma Library, GameSpot API, Kitsu API',
+		type: 'front-end',
 	},
 	{
 		title: 'Lite Speed',
@@ -61,32 +59,12 @@ export const PROJECTS = [
 			'Full-Stack MERN App, JavaScript, React, Express.js, Node.js, MongoDB, Mongoose, GraphQL, Apollo Server, JWT',
 		type: 'full-stack',
 	},
-	// TODO - enable once Pass the Page is re-deployed
-	// {
-	// 	title: 'Pass the Page',
-	// 	url: 'https://passthepage.herokuapp.com/',
-	// 	repo: 'pass-the-page',
-	// 	image: photo1,
-	// 	features:
-	// 		'Full-Stack, JavaScript, Express.js, Node.js, MySQL, Sequelize, RESTful API, CSS, Bootstrap, Handlebars, MVC',
-	// 	type: 'full-stack',
-	// },
 	{
 		title: 'Team Builder',
 		url: 'http://bit.ly/teambuilder-tc',
 		repo: 'team-builder',
 		image: photo7,
-		features:
-			'Command-line Team Profile Generator, JavaScript, Node.js, OOP, Inquirer.js, Jest, TDD, Materialize CSS',
+		features: 'Command-line Team Profile Generator, JavaScript, Node.js, OOP, Inquirer.js, Jest, TDD, Materialize CSS',
 		type: 'back-end',
 	},
-	// TODO - enable Employee Tracker after refactoring it
-	// {
-	// 	title: 'Employee Tracker',
-	// 	url: 'http://bit.ly/emptracker-tc',
-	// 	repo: 'employee-tracker',
-	// 	image: photo8,
-	// 	features: 'Command-line Employee Tracker, JavaScript, Node.js, SQL, MySQL, Inquirer.js',
-	// 	type: 'back-end',
-	// },
 ];
