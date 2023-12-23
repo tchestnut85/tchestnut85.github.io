@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.39d5deef.css",
-    "main.js": "/static/js/main.727f5974.js",
+    "main.js": "/static/js/main.2c6fb801.js",
     "static/media/nhl-dashboard.png": "/static/media/nhl-dashboard.c67ee3b620abf26c9954.png",
     "static/media/lite-speed.png": "/static/media/lite-speed.771c1a4debb643edf9ae.png",
     "static/media/match-game.png": "/static/media/match-game.fa2a70040b88c5e2046e.png",
@@ -35,10 +35,10 @@
     "static/media/heroku.svg": "/static/media/heroku.9dee12cefa8a114bda7e.svg",
     "static/media/bulma.svg": "/static/media/bulma.ecefb4da633f2f1f370e.svg",
     "main.39d5deef.css.map": "/static/css/main.39d5deef.css.map",
-    "main.727f5974.js.map": "/static/js/main.727f5974.js.map"
+    "main.2c6fb801.js.map": "/static/js/main.2c6fb801.js.map"
   },
   "entrypoints": [
     "static/css/main.39d5deef.css",
-    "static/js/main.727f5974.js"
+    "static/js/main.2c6fb801.js"
   ]
 }
