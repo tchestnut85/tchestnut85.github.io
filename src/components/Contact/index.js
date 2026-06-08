@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { usePostHog } from '@posthog/react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCopy } from '@fortawesome/free-regular-svg-icons';
@@ -10,19 +11,26 @@ import { SOCIAL_URLS } from '../../constants/socialUrls';
 
 function Contact() {
 	const [emailCopied, setEmailCopied] = useState(false);
+	const posthog = usePostHog();
 
 	const copyEmail = async () => {
 		try {
 			await navigator.clipboard.writeText(EMAIL);
 			setEmailCopied(true);
+			posthog.capture('email_copied');
 
 			setTimeout(() => {
 				setEmailCopied(false);
 			}, 3000);
 		} catch (err) {
+			posthog.captureException(err);
 			console.error(err);
 			setEmailCopied(false);
 		}
+	};
+
+	const handleEmailLinkClick = () => {
+		posthog.capture('email_link_clicked');
 	};
 
 	const renderSocialLinks = () => {
@@ -31,7 +39,13 @@ function Contact() {
 				{Object.keys(SOCIAL_URLS).map(key => {
 					const { name, url } = SOCIAL_URLS[key];
 					return (
-						<Link key={name} label={name} url={url} className="social-link" />
+						<Link
+							key={name}
+							label={name}
+							url={url}
+							className="social-link"
+							onClick={() => posthog.capture('social_link_clicked', { platform: name, url })}
+						/>
 					);
 				})}
 			</div>
@@ -46,7 +60,7 @@ function Contact() {
 					<div className="content email-section">
 						<h3 className="sub-heading">{CONTACT_TEXT.email.heading}</h3>
 						<div className="email">
-							<a id="email" href={`mailto:${EMAIL}`}>
+							<a id="email" href={`mailto:${EMAIL}`} onClick={handleEmailLinkClick}>
 								{EMAIL}
 							</a>
 							<button className="email-btn">

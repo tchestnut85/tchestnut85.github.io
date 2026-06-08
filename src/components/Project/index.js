@@ -1,10 +1,29 @@
 import React from 'react';
+import { usePostHog } from '@posthog/react';
 
 import Link from '../Link';
 
 import { GITHUB_BASE_URL, PROJECT_TEXT } from '../../constants/projects';
 
 function Project({ project }) {
+	const posthog = usePostHog();
+
+	const handleProjectLinkClick = () => {
+		posthog.capture('project_link_clicked', {
+			project_title: project.title,
+			project_type: project.type,
+			url: project.url,
+		});
+	};
+
+	const handleGithubClick = () => {
+		posthog.capture('project_github_clicked', {
+			project_title: project.title,
+			repo: project.repo,
+			url: `${GITHUB_BASE_URL}${project.repo}`,
+		});
+	};
+
 	return (
 		<div className="grid-item">
 			<h2 className="project-title">{project.title}</h2>
@@ -28,11 +47,13 @@ function Project({ project }) {
 							: PROJECT_TEXT.visitLabel.frontEnd
 					}
 					url={project.url}
+					onClick={handleProjectLinkClick}
 				/>
 				<Link
 					label={PROJECT_TEXT.githubLabel}
 					url={`${GITHUB_BASE_URL}${project.repo}`}
 					className="project-repo"
+					onClick={handleGithubClick}
 				/>
 			</div>
 		</div>

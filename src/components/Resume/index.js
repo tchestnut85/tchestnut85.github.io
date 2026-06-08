@@ -1,4 +1,5 @@
 import React from 'react';
+import { usePostHog } from '@posthog/react';
 
 import { SKILLS, SKILL_TYPES, RESUME_TEXT, RESUME_URL } from '../../constants/skills';
 
@@ -33,6 +34,12 @@ const ResumeSection = ({ skills }) => {
 };
 
 function Resume() {
+	const posthog = usePostHog();
+
+	const handleResumeLinkClick = () => {
+		posthog.capture('resume_link_clicked');
+	};
+
 	return (
 		<section className="resume-section">
 			<div>
@@ -40,7 +47,13 @@ function Resume() {
 			</div>
 			<p className="content resume-content">
 				{RESUME_TEXT.text}
-				<a className="resume-link" href={RESUME_URL} target="_blank" rel="noopener noreferrer">
+				<a
+					className="resume-link"
+					href={RESUME_URL}
+					target="_blank"
+					rel="noopener noreferrer"
+					onClick={handleResumeLinkClick}
+				>
 					{RESUME_TEXT.here}
 				</a>
 			</p>
