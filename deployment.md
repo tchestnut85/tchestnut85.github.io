@@ -1,0 +1,7 @@
+- deployment steps:
+  - `npm run build`
+  - `npm run deploy`
+  - check https://github.com/tchestnut85/tchestnut85.github.io/deployments to make sure deployment was successful
+  - go to Setting -> Pages https://github.com/tchestnut85/tchestnut85.github.io/settings/pages
+    - in Custom Domain input, enter `tomchestnut.dev` and Save
+    - give it a minute then check https://tomchestnut.dev/ to make sure deployment was successful
